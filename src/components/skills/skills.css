@@ -1,0 +1,194 @@
+.lapview {
+  height: 100vh;
+  background: rgb(30, 30, 30);
+  background: rgb(30, 30, 30);
+  color: white;
+}
+
+.mview {
+  display: none;
+  height: auto;
+  background: rgb(30, 30, 30);
+  color: white;
+}
+
+.underscore4 {
+  width: 130px;
+  background-color: white;
+  height: 10px;
+  margin: 0px 10px;
+  border-radius: 5px;
+}
+
+.skillcards {
+  height: 60%;
+  width: 90%;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  border-radius: 5px;
+  overflow-x: auto;
+  background: rgb(30, 30, 30);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.skillstitle {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.skill {
+  font-size: medium;
+  font-weight: 800;
+}
+
+.skill:hover {
+  color: rgb(171, 171, 50);
+}
+
+.selectedskill {
+  font-size: medium;
+  font-weight: 800;
+  color: yellow;
+}
+
+.cardz {
+  height: 70%;
+  width: 16%;
+  background-color: rgb(76, 76, 76);
+  margin: 1%;
+  flex: 0 0 auto;
+  border-radius: 7px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.mcardz {
+  margin: 1.5rem 0;
+  color: white;
+  /* background-color: rgb(76, 76, 76); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardzimage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  overflow: hidden;
+}
+
+.mcardzimage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.loader {
+  width: 100%;
+  height: 5%;
+  background-color: black;
+  border-radius: 5px;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.mloader {
+  width: 80%;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.load {
+  background-color: white;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.mskills {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background-color: #3a3939;
+}
+
+.mskilltitle {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.scontent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .content {
+    display: none !important;
+  }
+
+  .lapview {
+    display: none;
+  }
+
+  .mview {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scontent {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+
+  .mskills {
+    display: flex;
+    margin: 5%;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .mtitle {
+    display: block;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: Montserrat, sans-serif;
+    margin-top: 10px;
+  }
+
+  .underscore {
+    width: 160px;
+  }
+}
