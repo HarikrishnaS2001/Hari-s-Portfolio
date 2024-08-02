@@ -17,7 +17,7 @@ const CustomNavbar = () => {
           <Nav.Link as={Link} to="skills" className="menuitem eap">
             Skills
           </Nav.Link>
-          <Nav.Link as={Link} to="Experience" className="menuitem eap">
+          <Nav.Link as={Link} to="experience" className="menuitem eap">
             Experience
           </Nav.Link>
         </Nav>

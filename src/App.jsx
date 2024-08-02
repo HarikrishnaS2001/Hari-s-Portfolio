@@ -3,6 +3,7 @@ import Intro from "./components/intro/intro";
 import Navbar from "./components/navbar/navbar";
 import Education from "./components/education/education";
 import Skills from "./components/skills/skills";
+import Exp from "./components/exp/exp";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       </div>
       <div className="skills">
         <Skills />
+      </div>
+      <div className="experience">
+        <Exp />
       </div>
     </div>
   );
