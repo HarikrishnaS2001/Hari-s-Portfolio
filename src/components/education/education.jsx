@@ -191,7 +191,7 @@ const Education = () => {
               <div className="year">2019</div>
               <div className="mcontain">
                 <div className="d-flex align-items-center justify-content-center">
-                  <img src={srivv} alt="sav" height="70%" width="70%" />
+                  <img src={srivv} alt="sav" height="70%" width="70%"/>
                 </div>
                 <div className="msname">SVV</div>
               </div>
