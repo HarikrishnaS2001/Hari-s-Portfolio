@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/navbar";
 import Education from "./components/education/education";
 import Skills from "./components/skills/skills";
 import Exp from "./components/exp/exp";
+import Me from "./components/knowme/me";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
       </div>
       <div className="experience">
         <Exp />
+      </div>
+      <div className="knowme">
+        <Me />
       </div>
     </div>
   );

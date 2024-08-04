@@ -20,6 +20,10 @@ const CustomNavbar = () => {
           <Nav.Link as={Link} to="experience" className="menuitem eap">
             Experience
           </Nav.Link>
+
+          <Nav.Link as={Link} to="knowme" className="menuitem eap">
+            knowme
+          </Nav.Link>
         </Nav>
         <div className="menu ml-auto">
           <div className="contactme">
