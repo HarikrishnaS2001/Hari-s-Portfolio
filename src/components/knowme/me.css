@@ -35,6 +35,14 @@
   border-radius: 5px;
 }
 
+.malm{
+  border: 2px solid;
+  font-size: x-large;
+  width: 90%;
+  text-align: center;
+  border-radius: 5px;
+}
+
 .tborder {
   color: rgb(30, 30, 30);
   text-shadow: 2px 0 white, -2px 0 white, 0 2px white, 0 -2px white,
@@ -65,6 +73,15 @@
   flex-direction: column;
   height: 100%;
   width: 75%;
+  border-radius: 5px;
+  border: white 2px solid;
+}  
+
+.mmovies {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
   border-radius: 5px;
   border: white 2px solid;
 }  
@@ -101,6 +118,11 @@
 
 .dialogue-container {
   width: 100%;
+}
+
+.mdialogue-container {
+  width: 90%;
+  margin-top: 0.5rem;
 }
 
 .dialogue-bubble {
@@ -141,6 +163,12 @@
   z-index: 2;
 }
 
+.mimagecontainer {
+  width: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .imagecontainer {
   width: 100%;
   border-radius: 10px;
@@ -158,12 +186,33 @@
   border-radius: 5px;
 }
 
+.mtravel{
+  width: 90%;
+  margin-top: 0.5rem;
+}
+
 .sports {
   height: 100%;
   width: 25%;
   overflow: hidden;
   color: white;
   background-color: rgb(76, 76, 76);
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-inline: 0.5rem;
+  /* border: white 2px solid; */
+}
+
+.msports {
+  width: 90%;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  color: white;
+  background-color: rgb(49, 49, 49);
   border-radius: 10px;
   text-align: center;
   display: flex;
@@ -186,3 +235,27 @@
   color: black;
   border-radius: 10px;
 }
+
+.mfitness {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  margin-block: 1rem;
+}
+
+.mmusic {
+  background-color: black;
+  text-align: center;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 10px;
+  width: 90%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}   
