@@ -8,6 +8,7 @@ import comic5 from "../../assets/comicimg5.JPG";
 import comic6 from "../../assets/comicimg6.jpeg";
 import comic7 from "../../assets/comicimg8.jpeg";
 import comic8 from "../../assets/comicimg9.jpeg";
+import comic10 from "../../assets/comicimg10.jpeg";
 
 const Me = () => {
   return (
@@ -36,9 +37,9 @@ const Me = () => {
             </div>
             <div className="h-100 w-100 d-flex flex-column">
               <div className="row1">
-                <div className=" fitness gochi">
-                  Photography
-                  <img src={comic6} alt="comic6" height="90%" width="90%"></img>
+                <div className="sports gochi">
+                  <div>Football❤️</div>
+                  <img src={comic5} alt="comic5" height="90%" width="85%" />
                 </div>
 
                 <div className="movies">
@@ -81,13 +82,13 @@ const Me = () => {
                       </div>
                     </div>
                   </div>
-                  {/* <div
+                  <div
                     className="w-50 h-100 d-flex justify-content-center align-items-center"
                     style={{ objectFit: "cover" }}
                   >
                     <img src={comic3} alt="comic3" height="100%" width="100%" />
-                  </div> */}
-                  <div
+                  </div>
+                  {/* <div
                     className="d-flex flex-column h-100 w-50"
                     style={{ backgroundColor: "black" }}
                   >
@@ -117,14 +118,14 @@ const Me = () => {
                       className="w-100 h-50 d-flex justify-content-center align-items-center"
                       style={{ objectFit: "cover" }}
                     >
-                      {/* <div className="text-center">
+                      <div className="text-center">
                         Travel
                         <i class="fa fa-heart" style={{ color: "white" }}></i>
-                      </div> */}
+                      </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
-
+                <div className="d-flex flex-column align-items-center h-100 w-25" style={{margin:'0.5rem'}}>
                 <div className="music gochi">
                   <div className="d-flex flex-column justify-content-between  align-items-stretch h-100">
                     <div className="h-100">
@@ -149,9 +150,13 @@ const Me = () => {
                     </div>
                   </div>
                 </div>
-                <div className="sports gochi">
-                  <div>Football❤️</div>
-                  <img src={comic5} alt="comic5" height="90%" width="90%" />
+                {/* <div className="h-50 w-100 d-flex justify-content-center align-items-center" style={{margin:'0.5rem'}}>
+                  <img src={comic10} alt="comic10"height='100%' width='100%'/>
+                </div> */}
+                </div>
+                <div className=" fitness gochi">
+                  Photography
+                  <img src={comic6} alt="comic6" height="90%" width="90%"></img>
                 </div>
               </div>
             </div>
