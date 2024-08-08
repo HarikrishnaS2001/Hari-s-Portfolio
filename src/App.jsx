@@ -10,24 +10,24 @@ import Contactme from "./components/contactme/contactme";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
       <div className="classsec">
-        <section className="home">
+        <Navbar />
+        <section className="home" id="home">
           <Intro />
         </section>
-        <section className="education">
+        <section className="education" id="education">
           <Education />
         </section>
-        <section className="skills">
+        <section className="skills" id="skills">
           <Skills />
         </section>
-        <section className="experience">
+        <section className="experience" id="experience">
           <Exp />
         </section>
-        <section className="knowme">
+        <section className="knowme" id="knowme">
           <Me />
         </section>
-        <section className="contactme">
+        <section className="contactme" id="contactme">
           <Contactme />
         </section>
       </div>

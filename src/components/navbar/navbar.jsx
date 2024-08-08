@@ -1,38 +1,47 @@
 import "./navbar.css";
-import { Link } from "react-scroll";
 import { Navbar, Nav } from "react-bootstrap";
+import { useState, useEffect } from "react";
 
 const CustomNavbar = () => {
-  return (
-    <Navbar expand="lg" className="navbar">
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto menu">
-          <Nav.Link as={Link} to="home" className="menuitem home">
-            Home
-          </Nav.Link>
-          <Nav.Link as={Link} to="education" className="menuitem eap">
-            Education
-          </Nav.Link>
-          <Nav.Link as={Link} to="skills" className="menuitem eap">
-            Skills
-          </Nav.Link>
-          <Nav.Link as={Link} to="experience" className="menuitem eap">
-            Experience
-          </Nav.Link>
+  const [showNavbar, setShowNavbar] = useState(false);
 
-          <Nav.Link as={Link} to="knowme" className="menuitem eap">
-            knowme
-          </Nav.Link>
-        </Nav>
-        <div className="menu ml-auto">
-          <div className="contactme">
-            <i className="fas fa-comment-alt"></i>
-            Contact Me
-          </div>
-        </div>
-      </Navbar.Collapse>
-    </Navbar>
+  const handleMouseMove = (event) => {
+    if (event.clientY <= 50) {
+      setShowNavbar(true);
+    } else {
+      setShowNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+  return (
+      <Navbar expand="lg" className={`navbar ${showNavbar ? "" : "hidden"}`}>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto menu">
+            <a href="#home" className="menuitem home">
+              Home
+            </a>
+            <a href="#education" className="menuitem eap">
+              Education
+            </a>
+            <a href="#skills" className="menuitem eap">
+              Skills
+            </a>
+            <a href="#experience" className="menuitem eap">
+              knowme
+            </a>
+            <a href="#contactme" className="menuitem eap">
+              Contact Me
+            </a>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>      
   );
 };
 

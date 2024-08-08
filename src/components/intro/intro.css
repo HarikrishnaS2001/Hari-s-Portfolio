@@ -76,4 +76,7 @@
   .introContent {
     padding: 1rem;
   }
+  .intro{
+    margin-top: 60px;
+  }
 }

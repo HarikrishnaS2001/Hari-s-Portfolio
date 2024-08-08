@@ -1,12 +1,15 @@
-.navbar {
-  /* z-index: 5; */
-}
-
 .menu {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 3px;
+  width: 100vw;
+  background-color: rgb(30, 30, 30);
+}
+
+
+.navbar-toggler {
+  background-color: rgb(70, 70, 70);
 }
 
 .home {
@@ -18,8 +21,8 @@
 }
 
 .menuitem {
-  font-weight: 600;
-  margin: 0px 10px;
+  font-weight: 700;
+  margin: 0px 20px;
   border-bottom: 3px solid transparent;
   width: fit-content;
   height: fit-content;
@@ -27,8 +30,6 @@
 
 .menuitem:hover {
   color: yellow !important;
-  border-bottom: 3px solid yellow;
-  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -38,9 +39,4 @@
     margin: 10px 0;
   }
 
-  .contactme {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
 }
