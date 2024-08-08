@@ -48,6 +48,9 @@ const CustomNavbar = () => {
         <a href="#experience" className="menuitem" onClick={closeNavbar}>
           Experience
         </a>
+        <a href="#knowme" className="menuitem" onClick={closeNavbar}>
+          Know Me
+        </a>
         <a href="#contactme" className="menuitem" onClick={closeNavbar}>
           Contact Me
         </a>

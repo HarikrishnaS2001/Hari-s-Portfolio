@@ -7,41 +7,12 @@
   overflow: hidden;
 }
 
-.lh {
-  height: 60px;
-}
-
-.mh {
-  height: 30px;
-}
-
-.lnavbar {
-  position: fixed;
-  width: 100%;
-  transition: top 3s;
-  z-index: 1000;
-  background: rgb(30, 30, 30);
-  padding: 0;
-}
-
-.navbar-collapse {
-  height: 30px;
-}
-
-.navbar.hidden {
-  top: -60px;
-}
-
 @media (min-width: 768px) {
   .classsec {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100dvh;
     scroll-behavior: smooth;
-  }
-
-  .navbar {
-    height: 30px;
   }
 
   section {
