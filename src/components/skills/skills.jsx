@@ -282,16 +282,16 @@ const Skills = () => {
         <div className="content">
           <div className="skillstitle">
             <div className={PLclassName} onClick={PLpressed}>
-              Programming Languages
+              <div>Programming Languages</div>
             </div>
             <div className={FEclassName} onClick={FEpressed}>
-              Front End
+              <div>Front End</div>
             </div>
             <div className={BEclassName} onClick={BEpressed}>
-              Back End
+              <div>Back End</div>
             </div>
             <div className={OclassName} onClick={Opressed}>
-              Others
+              <div>Others</div>
             </div>
           </div>
           {PLclassName === "selectedskill" ? (

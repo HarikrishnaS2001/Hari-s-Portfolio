@@ -5,25 +5,31 @@ import Education from "./components/education/education";
 import Skills from "./components/skills/skills";
 import Exp from "./components/exp/exp";
 import Me from "./components/knowme/me";
+import Contactme from "./components/contactme/contactme";
 
 function App() {
   return (
     <div className="App">
-      <div className="home">
-        <Navbar />
-        <Intro />
-      </div>
-      <div className="education">
-        <Education />
-      </div>
-      <div className="skills">
-        <Skills />
-      </div>
-      <div className="experience">
-        <Exp />
-      </div>
-      <div className="knowme">
-        <Me />
+      {/* <Navbar /> */}
+      <div className="classsec">
+        <section className="home">
+          <Intro />
+        </section>
+        <section className="education">
+          <Education />
+        </section>
+        <section className="skills">
+          <Skills />
+        </section>
+        <section className="experience">
+          <Exp />
+        </section>
+        <section className="knowme">
+          <Me />
+        </section>
+        <section className="contactme">
+          <Contactme />
+        </section>
       </div>
     </div>
   );

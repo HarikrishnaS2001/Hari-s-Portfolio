@@ -1,23 +1,5 @@
-.contactme {
-  background-color: white;
-  color: black;
-  padding: 3px 10px;
-  cursor: pointer !important;
-  border-radius: 10%;
-  font-weight: 600;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-}
 .navbar {
   /* z-index: 5; */
-}
-
-.contactme:hover {
-  background-color: yellow !important;
-  cursor: pointer;
 }
 
 .menu {
@@ -25,10 +7,6 @@
   justify-content: center;
   align-items: center;
   padding-top: 3px;
-}
-
-.contactme .fas {
-  margin-right: 10px;
 }
 
 .home {

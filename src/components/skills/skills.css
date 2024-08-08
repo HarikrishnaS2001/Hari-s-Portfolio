@@ -44,16 +44,25 @@
 .skill {
   font-size: medium;
   font-weight: 800;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .skill:hover {
   color: rgb(171, 171, 50);
+  cursor: pointer;
 }
 
 .selectedskill {
   font-size: medium;
   font-weight: 800;
   color: yellow;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cardz {

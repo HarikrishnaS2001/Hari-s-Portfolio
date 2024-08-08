@@ -7,12 +7,36 @@
   overflow: hidden;
 }
 
-/* hide scrollbar but allow scrolling */
-element {
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
-  overflow-y: scroll;
+.navbar {
+  /* position: fixed; */
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 1000;
 }
-element::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
+
+.navbar.hidden {
+  top: -60px; /* Adjust this value based on your navbar height */
+}
+
+@media (min-width: 768px) {
+  .classsec {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll; 
+    height: 100dvh;
+    scroll-behavior: smooth;
+  }
+
+  section {
+    scroll-snap-align: start;
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .App {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+  }
+
+  .App::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
 }

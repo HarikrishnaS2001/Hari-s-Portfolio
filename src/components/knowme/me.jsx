@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./me.css";
 import comic1 from "../../assets/comicimg1.png";
 import comic2 from "../../assets/comicimg2.jpeg";
@@ -6,11 +6,19 @@ import comic3 from "../../assets/comicimg3.jpeg";
 import comic4 from "../../assets/comicimg4.jpeg";
 import comic5 from "../../assets/comicimg5.JPG";
 import comic6 from "../../assets/comicimg6.jpeg";
+import TypingAnimation from "../TypingAnimation/TypingAnimation";
 import comic7 from "../../assets/comicimg8.jpeg";
 import comic8 from "../../assets/comicimg9.jpeg";
+import { Warning} from "@mui/icons-material";
 
 const Me = () => {
-  return (
+  const [knowme, setKnowMe] = useState(false);
+
+  const handleButtonClick = () => {
+    setKnowMe(true);
+  };
+
+  return knowme ? (
     <div>
       <div className="lapview">
         <div className="h-100 w-100">
@@ -152,6 +160,13 @@ const Me = () => {
                       </div>
                     </div>
                   </div>
+                  <div className="h-50 w-100 p-3 fw-bold">
+                    <TypingAnimation
+                      text="I can type at a speed of 75 words per minute or higher."
+                      speed={50}
+                      delay={2000}
+                    />
+                  </div>
                   {/* <div className="h-50 w-100 d-flex justify-content-center align-items-center" style={{margin:'0.5rem'}}>
                   <img src={comic10} alt="comic10"height='100%' width='100%'/>
                 </div> */}
@@ -265,6 +280,13 @@ const Me = () => {
                     </div>
                   </div> */}
           </div>
+          <div className="h-50 w-100 p-3 fw-bolder">
+            <TypingAnimation
+              text="Trying to be a better coder and a learner everyday"
+              speed={100}
+              delay={2000}
+            />
+          </div>
           <div className="mmusic gochi">
             <div className="d-flex flex-column justify-content-between  align-items-stretch h-100">
               <div className="h-100">
@@ -289,11 +311,26 @@ const Me = () => {
               </div>
             </div>
           </div>
+
           <div className=" mfitness gochi">
-                  Photography
-                  <img src={comic6} alt="comic6" height="90%" width="90%"></img>
-                </div>
+            Photography
+            <img src={comic6} alt="comic6" height="90%" width="90%"></img>
+          </div>
         </div>
+      </div>
+    </div>
+  ) : (
+    <div className="home-page">
+      <div style={{ width: "80%" }}>
+        <h1>HI!</h1>
+        <p>
+          This page doesn't contain any technical information. It's all about
+          knowing Hari as a person and his hobbies.{" "}
+        </p>
+        <p><Warning/>Click only if you want to know more about him!<Warning/></p>
+        <button onClick={handleButtonClick}>
+          Click here to know More About Me
+        </button>
       </div>
     </div>
   );
