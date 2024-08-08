@@ -20,7 +20,8 @@ const CustomNavbar = () => {
     };
   }, []);
   return (
-      <Navbar expand="lg" className={`navbar ${showNavbar ? "" : "hidden"}`}>
+    <div>
+      <Navbar expand="lg" className={`lnavbar ${showNavbar ? "" : "hidden"}`}>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto menu">
@@ -41,7 +42,30 @@ const CustomNavbar = () => {
             </a>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>      
+      </Navbar>
+      <Navbar expand="lg" className="mnavbar">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto menu">
+            <a href="#home" className="menuitem home">
+              Home
+            </a>
+            <a href="#education" className="menuitem eap">
+              Education
+            </a>
+            <a href="#skills" className="menuitem eap">
+              Skills
+            </a>
+            <a href="#experience" className="menuitem eap">
+              knowme
+            </a>
+            <a href="#contactme" className="menuitem eap">
+              Contact Me
+            </a>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </div>
   );
 };
 

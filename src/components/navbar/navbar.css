@@ -1,3 +1,24 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  background-color: rgb(30, 30, 30);
+}
+
+.mnavbar{
+  display: none;
+}
+
+.lnavbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-toggler {
+  background-color: rgb(70, 70, 70);
+}
+
 .menu {
   display: flex;
   justify-content: center;
@@ -7,25 +28,13 @@
   background-color: rgb(30, 30, 30);
 }
 
-
-.navbar-toggler {
-  background-color: rgb(70, 70, 70);
-}
-
-.home {
-  color: yellow !important;
-}
-
-.eap {
-  color: white !important;
-}
-
 .menuitem {
   font-weight: 700;
   margin: 0px 20px;
   border-bottom: 3px solid transparent;
   width: fit-content;
   height: fit-content;
+  color: white !important;
 }
 
 .menuitem:hover {
@@ -37,6 +46,14 @@
   .menuitem {
     text-align: center;
     margin: 10px 0;
+  }
+
+  .lnavbar{
+    display: none;
+  }
+
+  .mnavbar{
+    display: block;
   }
 
 }

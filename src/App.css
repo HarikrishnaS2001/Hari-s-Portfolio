@@ -15,7 +15,7 @@
   height: 30px;
 }
 
-.navbar {
+.lnavbar {
   position: fixed;
   width: 100%;
   transition: top 3s;
