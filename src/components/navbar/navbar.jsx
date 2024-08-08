@@ -1,9 +1,17 @@
-import "./navbar.css";
-import { Navbar, Nav } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import './navbar.css';
 
 const CustomNavbar = () => {
-  const [showNavbar, setShowNavbar] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
 
   const handleMouseMove = (event) => {
     if (event.clientY <= 50) {
@@ -14,57 +22,36 @@ const CustomNavbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
+    if (window.innerWidth > 992) {
+      window.addEventListener('mousemove', handleMouseMove);
+    }
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
+
   return (
-    <div>
-      <Navbar expand="lg" className={`lnavbar ${showNavbar ? "" : "hidden"}`}>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto menu">
-            <a href="#home" className="menuitem home">
-              Home
-            </a>
-            <a href="#education" className="menuitem eap">
-              Education
-            </a>
-            <a href="#skills" className="menuitem eap">
-              Skills
-            </a>
-            <a href="#experience" className="menuitem eap">
-              knowme
-            </a>
-            <a href="#contactme" className="menuitem eap">
-              Contact Me
-            </a>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      <Navbar expand="lg" className="mnavbar">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto menu">
-            <a href="#home" className="menuitem home">
-              Home
-            </a>
-            <a href="#education" className="menuitem eap">
-              Education
-            </a>
-            <a href="#skills" className="menuitem eap">
-              Skills
-            </a>
-            <a href="#experience" className="menuitem eap">
-              knowme
-            </a>
-            <a href="#contactme" className="menuitem eap">
-              Contact Me
-            </a>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+    <div className={`navbar ${showNavbar ? '' : 'hidden'}`}>
+      <button onClick={toggleNavbar} className="navbar-toggler">
+        ☰
+      </button>
+      <div className={`menu ${isOpen ? 'open' : 'close'}`}>
+        <a href="#home" className="menuitem" onClick={closeNavbar}>
+          Home
+        </a>
+        <a href="#education" className="menuitem" onClick={closeNavbar}>
+          Education
+        </a>
+        <a href="#skills" className="menuitem" onClick={closeNavbar}>
+          Skills
+        </a>
+        <a href="#experience" className="menuitem" onClick={closeNavbar}>
+          Experience
+        </a>
+        <a href="#contactme" className="menuitem" onClick={closeNavbar}>
+          Contact Me
+        </a>
+      </div>
     </div>
   );
 };

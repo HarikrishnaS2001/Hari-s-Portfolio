@@ -2,22 +2,19 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
-  transition: transform 0.3s ease-in-out;
   background-color: rgb(30, 30, 30);
-}
-
-.mnavbar{
-  display: none;
-}
-
-.lnavbar.hidden {
-  transform: translateY(-100%);
+  z-index: 1000;
+  transition: top 0.3s;
+  height: 60px;
+  padding: 0;
 }
 
 .navbar-toggler {
-  background-color: rgb(70, 70, 70);
+  color: white;
+  display: none;
 }
+
+
 
 .menu {
   display: flex;
@@ -25,35 +22,54 @@
   align-items: center;
   padding-top: 3px;
   width: 100vw;
-  background-color: rgb(30, 30, 30);
 }
 
 .menuitem {
   font-weight: 700;
-  margin: 0px 20px;
-  border-bottom: 3px solid transparent;
-  width: fit-content;
-  height: fit-content;
-  color: white !important;
+  margin: 0px 30px;
+  color: white;
+  font-family: sans-serif;
 }
 
 .menuitem:hover {
-  color: yellow !important;
+  color: yellow;
   cursor: pointer;
 }
 
 @media (max-width: 992px) {
-  .menuitem {
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .lnavbar{
-    display: none;
-  }
-
-  .mnavbar{
+  .navbar-toggler {
     display: block;
   }
 
+  .navbar{
+    height: 40px;
+  }
+
+  .menu {
+    display: flex !important;
+    flex-direction: column;
+    background-color: rgb(30, 30, 30);
+  }
+
+  .menuitem {
+    margin: 10px 0;
+  }
+
+  .navbar.hidden {
+    top: 60px; /* This can be adjusted based on navbar height */
+  }
+
+  .menu.open {
+    display: block;
+  }
+
+  .menuitem{
+    width: 100%;
+    text-align: center;
+    padding-block:5px ;
+  }
+
+  .menu.close {
+    display: none !important;
+  }
 }
