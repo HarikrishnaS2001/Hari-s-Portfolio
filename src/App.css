@@ -2,6 +2,11 @@
   background: rgb(30, 30, 30);
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
+
 .home {
   height: 100vh;
   overflow: hidden;
@@ -12,7 +17,6 @@
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100dvh;
-    scroll-behavior: smooth;
   }
 
   section {
