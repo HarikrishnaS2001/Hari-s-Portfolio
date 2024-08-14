@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./skills.css";
 import sinon from "../../assets/sinon.png";
 import chai from "../../assets/chai.png";
+import Title from "../title/Title";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const [PLclassName, PLsetClassName] = useState("selectedskill");
@@ -97,10 +99,10 @@ const Skills = () => {
       proficiency: "70%",
     },
     {
-      name: "Axios",
+      name: "Tailwindcss",
       imageUrl:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
-      proficiency: "60%",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      proficiency: "70%",
     },
   ];
   const BEskills = [
@@ -169,7 +171,6 @@ const Skills = () => {
       proficiency: "80%",
     },
   ];
-
   const Oskills = [
     {
       name: "Git",
@@ -269,278 +270,483 @@ const Skills = () => {
 
   return (
     <div className="skills">
-      <div className="lapview">
-        <div className="titlediv">
-          <div className="title">Skills</div>
-          <div className="design">
-            <div className="dot"></div>
-            <div className="underscore4"></div>
-            <div className="dot"></div>
-          </div>
+      <Title title="Skills" underscore="underscore4" />
+      <div className="content">
+        <div className="skillstitle">
+          <motion.div
+            className={PLclassName}
+            onClick={PLpressed}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div>Programming Languages</div>
+          </motion.div>
+          <motion.div
+            className={FEclassName}
+            onClick={FEpressed}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div>Front End</div>
+          </motion.div>
+          <motion.div
+            className={BEclassName}
+            onClick={BEpressed}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div>Back End</div>
+          </motion.div>
+          <motion.div
+            className={OclassName}
+            onClick={Opressed}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div>Others</div>
+          </motion.div>
         </div>
-
-        <div className="content">
-          <div className="skillstitle">
-            <div className={PLclassName} onClick={PLpressed}>
-              <div>Programming Languages</div>
-            </div>
-            <div className={FEclassName} onClick={FEpressed}>
-              <div>Front End</div>
-            </div>
-            <div className={BEclassName} onClick={BEpressed}>
-              <div>Back End</div>
-            </div>
-            <div className={OclassName} onClick={Opressed}>
-              <div>Others</div>
-            </div>
+        {PLclassName === "selectedskill" ? (
+          <div className="skillcards">
+            {Pskills.map((skills, i) => (
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.1, delay: (i % 6) * 0.1 }}
+                className="cardz"
+              >
+                <div>
+                  <motion.div
+                    initial={{ rotateX: 180 }}
+                    whileInView={{ rotateX: 0 }}
+                    transition={{ duration: 0.2, delay: (i % 6) * 0.15 }}
+                    className="cardzimage"
+                  >
+                    <img
+                      src={skills.imageUrl}
+                      alt={skills.name}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 1,
+                      delay: (i % 6) * 0.1,
+                      type: "spring",
+                      bounce: 0.3,
+                    }}
+                    className="mt-3 text-center"
+                  >
+                    {skills.name}
+                  </motion.div>
+                  <div className="loader">
+                    <motion.div
+                      className="load"
+                      initial={{ x: -50, opacity: 1 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: (i % 6) * 0.1,
+                      }}
+                      style={{ width: skills.proficiency }}
+                    ></motion.div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
-          {PLclassName === "selectedskill" ? (
-            <div className="skillcards">
-              {Pskills.map((skills, i) => (
-                <div className="cardz">
-                  <div>
-                    <div className="cardzimage">
-                      <img
-                        src={skills.imageUrl}
-                        alt={skills.name}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
-                    </div>
-
-                    <div className="mt-3 text-center">{skills.name}</div>
-                    <div className="loader">
-                      <div
-                        className="load"
-                        style={{ width: skills.proficiency }}
-                      ></div>
-                    </div>
+        ) : (
+          <div></div>
+        )}
+        {FEclassName === "selectedskill" ? (
+          <div className="skillcards">
+            {FEskills.map((skills, i) => (
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.1, delay: (i % 6) * 0.1 }}
+                className="cardz"
+              >
+                <div>
+                  <motion.div
+                    initial={{ rotateX: 180 }}
+                    whileInView={{ rotateX: 0 }}
+                    transition={{ duration: 0.2, delay: (i % 6) * 0.15 }}
+                    className="cardzimage"
+                  >
+                    <img
+                      src={skills.imageUrl}
+                      alt={skills.name}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 1,
+                      delay: (i % 6) * 0.1,
+                      type: "spring",
+                      bounce: 0.3,
+                    }}
+                    className="mt-3 text-center"
+                  >
+                    {skills.name}
+                  </motion.div>{" "}
+                  <div className="loader">
+                    <motion.div
+                      className="load"
+                      initial={{ x: -50, opacity: 1 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: (i % 6) * 0.1,
+                      }}
+                      style={{ width: skills.proficiency }}
+                    ></motion.div>
                   </div>
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div></div>
-          )}
-          {FEclassName === "selectedskill" ? (
-            <div className="skillcards">
-              {FEskills.map((skills, i) => (
-                <div className="cardz">
-                  <div>
-                    <div className="cardzimage">
-                      <img
-                        src={skills.imageUrl}
-                        alt={skills.name}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
-                    </div>
+              </motion.div>
+            ))}
+          </div>
+        ) : (
+          <div></div>
+        )}
+        {BEclassName === "selectedskill" ? (
+          <div className="skillcards">
+            {BEskills.map((skills, i) => (
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.1, delay: (i % 6) * 0.1 }}
+                className="cardz"
+              >
+                <div>
+                  <motion.div
+                    initial={{ rotateX: 180 }}
+                    whileInView={{ rotateX: 0 }}
+                    transition={{ duration: 0.2, delay: (i % 6) * 0.15 }}
+                    className="cardzimage"
+                  >
+                    <img
+                      src={skills.imageUrl}
+                      alt={skills.name}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </motion.div>
 
-                    <div className="mt-3 text-center">{skills.name}</div>
-                    <div className="loader">
-                      <div
-                        className="load"
-                        style={{ width: skills.proficiency }}
-                      ></div>
-                    </div>
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 1,
+                      delay: (i % 6) * 0.1,
+                      type: "spring",
+                      bounce: 0.3,
+                    }}
+                    className="mt-3 text-center"
+                  >
+                    {skills.name}
+                  </motion.div>
+                  <div className="loader">
+                    <motion.div
+                      className="load"
+                      initial={{ x: -50, opacity: 1 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: (i % 6) * 0.1,
+                      }}
+                      style={{ width: skills.proficiency }}
+                    ></motion.div>
                   </div>
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div></div>
-          )}
-          {BEclassName === "selectedskill" ? (
-            <div className="skillcards">
-              {BEskills.map((skills, i) => (
-                <div className="cardz">
-                  <div>
-                    <div className="cardzimage">
-                      <img
-                        src={skills.imageUrl}
-                        alt={skills.name}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
-                    </div>
+              </motion.div>
+            ))}
+          </div>
+        ) : (
+          <div></div>
+        )}
+        {OclassName === "selectedskill" ? (
+          <div className="skillcards">
+            {Oskills.map((skills, i) => (
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.1, delay: (i % 6) * 0.1 }}
+                className="cardz"
+              >
+                <div>
+                  <motion.div
+                    initial={{ rotateX: 180 }}
+                    whileInView={{ rotateX: 0 }}
+                    transition={{ duration: 0.2, delay: (i % 6) * 0.15 }}
+                    className="cardzimage"
+                  >
+                    <img
+                      src={skills.imageUrl}
+                      alt={skills.name}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </motion.div>
 
-                    <div className="mt-3 text-center">{skills.name}</div>
-                    <div className="loader">
-                      <div
-                        className="load"
-                        style={{ width: skills.proficiency }}
-                      ></div>
-                    </div>
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 1,
+                      delay: (i % 6) * 0.1,
+                      type: "spring",
+                      bounce: 0.3,
+                    }}
+                    className="mt-3 text-center"
+                  >
+                    {skills.name}
+                  </motion.div>
+                  <div className="loader">
+                    <motion.div
+                      className="load"
+                      initial={{ x: -50, opacity: 1 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: (i % 6) * 0.1,
+                      }}
+                      style={{ width: skills.proficiency }}
+                    ></motion.div>
                   </div>
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div></div>
-          )}
-          {OclassName === "selectedskill" ? (
-            <div className="skillcards">
-              {Oskills.map((skills, i) => (
-                <div className="cardz">
-                  <div>
-                    <div className="cardzimage">
-                      <img
-                        src={skills.imageUrl}
-                        alt={skills.name}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
-                    </div>
-
-                    <div className="mt-3 text-center">{skills.name}</div>
-                    <div className="loader">
-                      <div
-                        className="load"
-                        style={{ width: skills.proficiency }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div></div>
-          )}
-        </div>
+              </motion.div>
+            ))}
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
-
-      <div className="mview">
-        <div className="titlediv">
-          <div className="mtitle">Skills</div>
-          <div className="design">
-            <div className="dot"></div>
-            <div className="underscore4"></div>
-            <div className="dot"></div>
+      <div className="scontent">
+        <div className="mskills">
+          <div className="mskilltitle">Programming Languages</div>
+          <div className="container">
+            <div className="row">
+              {Pskills.map((skills, index) => (
+                <div className="col-4 col-sm-1" key={index}>
+                  <div className="mcardz">
+                    <motion.div
+                      initial={{ rotateX: 180 }}
+                      whileInView={{ rotateX: 0 }}
+                      transition={{ duration: 0.2, delay: 0.15 }}
+                      className="mcardzimage"
+                    >
+                      <img
+                        src={skills.imageUrl}
+                        alt={skills.name}
+                        height="50%"
+                        width="50%"
+                      />
+                    </motion.div>
+                    <motion.div
+                      initial={{ y: 20, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: 0.1,
+                        type: "spring",
+                        bounce: 0.3,
+                      }}
+                      className="mt-3 text-center"
+                    >
+                      {skills.name}
+                    </motion.div>{" "}
+                    <div className="mloader">
+                      <motion.div
+                        className="load"
+                        initial={{ x: -30, opacity: 1 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{
+                          duration: 1,
+                          delay: 0.1,
+                        }}
+                        style={{ width: skills.proficiency }}
+                      ></motion.div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="scontent">
-          <div className="mskills">
-            <div className="mskilltitle">Programming Languages</div>
-            <div className="container">
-              <div className="row">
-                {Pskills.map((skills, index) => (
-                  <div className="col-4 col-sm-1" key={index}>
-                    <div className="mcardz">
-                      <div className="mcardzimage">
-                        <img
-                          src={skills.imageUrl}
-                          alt={skills.name}
-                          height="50%"
-                          width="50%"
-                        />
-                      </div>
-                      <div className="mt-3 text-center">{skills.name}</div>
-                      <div className="mloader">
-                        <div
-                          className="load"
-                          style={{ width: skills.proficiency }}
-                        ></div>
-                      </div>
+        <div className="mskills">
+          <div className="mskilltitle">FrontEnd Development</div>
+          <div className="container">
+            <div className="row">
+              {FEskills.map((skills, index) => (
+                <div className="col-4 col-sm-1" key={index}>
+                  <div className="mcardz">
+                    <motion.div
+                      initial={{ rotateX: 180 }}
+                      whileInView={{ rotateX: 0 }}
+                      transition={{ duration: 0.2, delay: 0.15 }}
+                      className="mcardzimage"
+                    >
+                      <img
+                        src={skills.imageUrl}
+                        alt={skills.name}
+                        height="50%"
+                        width="50%"
+                      />
+                    </motion.div>
+                    <motion.div
+                      initial={{ y: 20, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: 0.1,
+                        type: "spring",
+                        bounce: 0.3,
+                      }}
+                      className="mt-3 text-center"
+                    >
+                      {skills.name}
+                    </motion.div>{" "}
+                    <div className="mloader">
+                      <motion.div
+                        className="load"
+                        initial={{ x: -30, opacity: 1 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{
+                          duration: 1,
+                          delay: 0.1,
+                        }}
+                        style={{ width: skills.proficiency }}
+                      ></motion.div>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="mskills">
-            <div className="mskilltitle">FrontEnd Development</div>
-            <div className="container">
-              <div className="row">
-                {FEskills.map((skills, index) => (
-                  <div className="col-4 col-sm-1" key={index}>
-                    <div className="mcardz">
-                      <div className="mcardzimage">
-                        <img
-                          src={skills.imageUrl}
-                          alt={skills.name}
-                          height="50%"
-                          width="50%"
-                        />
-                      </div>
-                      <div className="mt-3 text-center">{skills.name}</div>
-                      <div className="mloader">
-                        <div
-                          className="load"
-                          style={{ width: skills.proficiency }}
-                        ></div>
-                      </div>
+        </div>
+        <div className="mskills">
+          <div className="mskilltitle">BackEnd Development</div>
+          <div className="container">
+            <div className="row">
+              {BEskills.map((skills, index) => (
+                <div className="col-4 col-sm-1" key={index}>
+                  <div className="mcardz">
+                    <motion.div
+                      initial={{ rotateX: 180 }}
+                      whileInView={{ rotateX: 0 }}
+                      transition={{ duration: 0.2, delay: 0.15 }}
+                      className="mcardzimage"
+                    >
+                      <img
+                        src={skills.imageUrl}
+                        alt={skills.name}
+                        height="50%"
+                        width="50%"
+                      />
+                    </motion.div>
+                    <motion.div
+                      initial={{ y: 20, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: 0.1,
+                        type: "spring",
+                        bounce: 0.3,
+                      }}
+                      className="mt-3 text-center"
+                    >
+                      {skills.name}
+                    </motion.div>{" "}
+                    <div className="mloader">
+                      <motion.div
+                        className="load"
+                        initial={{ x: -30, opacity: 1 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{
+                          duration: 1,
+                          delay: 0.1,
+                        }}
+                        style={{ width: skills.proficiency }}
+                      ></motion.div>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="mskills">
-            <div className="mskilltitle">BackEnd Development</div>
-            <div className="container">
-              <div className="row">
-                {BEskills.map((skills, index) => (
-                  <div className="col-4 col-sm-1" key={index}>
-                    <div className="mcardz">
-                      <div className="mcardzimage">
-                        <img
-                          src={skills.imageUrl}
-                          alt={skills.name}
-                          height="50%"
-                          width="50%"
-                        />
-                      </div>
-                      <div className="mt-3 text-center">{skills.name}</div>
-                      <div className="mloader">
-                        <div
-                          className="load"
-                          style={{ width: skills.proficiency }}
-                        ></div>
-                      </div>
+        </div>
+        <div className="mskills">
+          <div className="mskilltitle">Others</div>
+          <div className="container">
+            <div className="row">
+              {Oskills.map((skills, index) => (
+                <div className="col-4 col-sm-1" key={index}>
+                  <div className="mcardz">
+                    <motion.div
+                      initial={{ rotateX: 180 }}
+                      whileInView={{ rotateX: 0 }}
+                      transition={{ duration: 0.2, delay: 0.15 }}
+                      className="mcardzimage"
+                    >
+                      <img
+                        src={skills.imageUrl}
+                        alt={skills.name}
+                        height="50%"
+                        width="50%"
+                      />
+                    </motion.div>
+                    <motion.div
+                      initial={{ y: 20, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: 0.1,
+                        type: "spring",
+                        bounce: 0.3,
+                      }}
+                      className="mt-3 text-center"
+                    >
+                      {skills.name}
+                    </motion.div>{" "}
+                    <div className="mloader">
+                      <motion.div
+                        className="load"
+                        initial={{ x: -20, opacity: 1 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{
+                          duration: 1,
+                          delay: 0.1,
+                        }}
+                        style={{ width: skills.proficiency }}
+                      ></motion.div>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="mskills">
-            <div className="mskilltitle">Others</div>
-            <div className="container">
-              <div className="row">
-                {Oskills.map((skills, index) => (
-                  <div className="col-4 col-sm-1" key={index}>
-                    <div className="mcardz">
-                      <div className="mcardzimage">
-                        <img
-                          src={skills.imageUrl}
-                          alt={skills.name}
-                          height="50%"
-                          width="50%"
-                        />
-                      </div>
-                      <div className="mt-3 text-center">{skills.name}</div>
-                      <div className="mloader">
-                        <div
-                          className="load"
-                          style={{ width: skills.proficiency }}
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
