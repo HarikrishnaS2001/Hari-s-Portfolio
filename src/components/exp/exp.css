@@ -13,6 +13,7 @@
   display: flex;
   border-radius: 5px;
   overflow-x: auto;
+  overflow-y: hidden;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -27,7 +28,6 @@
 .line {
   height: 60%;
   width: 1.5px;
-  overflow: visible;
   background-color: white;
   border-radius: 1px;
   z-index: 1;
@@ -81,6 +81,7 @@
   text-align: center;
   font-size: 2rem;
   font-weight: 900;
+  color: white;
 }
 
 .mtimeyear1 {
@@ -90,6 +91,8 @@
   width: 100%;
   font-size: 1rem;
   font-weight: 900;
+  color: white;
+
 }
 
 .mtimeyear2 {
@@ -99,6 +102,8 @@
   width: 100%;
   font-size: 1rem;
   font-weight: 900;
+  color: white;
+
 }
 
 .timeyear2 {
@@ -109,6 +114,8 @@
   text-align: center;
   font-size: 2rem;
   font-weight: 900;
+  color: white;
+
 }
 
 .work1 {
