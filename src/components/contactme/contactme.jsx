@@ -9,6 +9,8 @@ import whatsapp from "../../assets/whatsapp.png";
 import mail from "../../assets/email.png";
 import linkedin from "../../assets/linkedin-logo.png";
 import { Download } from "@mui/icons-material";
+import Title from "../title/Title";
+import { motion } from "framer-motion";
 
 const Contactme = () => {
   const SocialData = [
@@ -48,27 +50,41 @@ const Contactme = () => {
     <div>
       <div className="contact">
         <div className="curve">
-          <div className="titlediv">
-            <div className="title">Contact Me</div>
-            <div className="mtitle">Contact Me</div>
-            <div className="design">
-              <div className="dot"></div>
-              <div className="underscore6"></div>
-              <div className="dot"></div>
-            </div>
-          </div>
+          <Title title="Contact Me" underscore="underscore6" />
 
           <div
             className="d-flex flex-column justify-content-around align-items-center w-100 flex-sm-row"
             style={{ height: "85%" }}
           >
             <div className=" p-3 text-center d-flex flex-column justify-content-center">
-              <div className="res">Resume</div>
+              <motion.div
+                initial={{ y: 200 }}
+                whileInView={{ y: 0 }}
+                transition={{
+                  duration: 0.2,
+                  type: "spring",
+                  bounce: 0.2,
+                  delay: 0.1,
+                }}
+                className="res"
+              >
+                Resume
+              </motion.div>
               <div
                 className="d-flex flex-column justify-content-between"
                 style={{ height: "100px" }}
               >
-                <div className="download cursor-pointer">
+                <motion.div
+                  initial={{ y: 100 }}
+                  whileInView={{ y: 0 }}
+                  transition={{
+                    duration: 0.2,
+                    type: "spring",
+                    bounce: 0.2,
+                    delay: 0.2,
+                  }}
+                  className="download cursor-pointer"
+                >
                   <a
                     className="text-white"
                     download
@@ -76,10 +92,20 @@ const Contactme = () => {
                     href={resume}
                     rel="noreferrer"
                   >
-                    Download CV <Download/>
+                    Download CV <Download />
                   </a>
-                </div>
-                <div className="view text-white cursor-pointer">
+                </motion.div>
+                <motion.div
+                  initial={{ y: 100 }}
+                  whileInView={{ y: 0 }}
+                  transition={{
+                    duration: 0.2,
+                    type: "spring",
+                    bounce: 0.2,
+                    delay: 0.3,
+                  }}
+                  className="view text-white cursor-pointer"
+                >
                   <a
                     className="td-none text-white t-field "
                     target="_blank"
@@ -88,7 +114,7 @@ const Contactme = () => {
                   >
                     View CV &nbsp; <MovingIcon className="socio" />
                   </a>
-                </div>
+                </motion.div>
               </div>
             </div>
             <div className="social">
@@ -96,7 +122,19 @@ const Contactme = () => {
               <div className="d-flex flex-row justify-content-around h-100 w-100">
                 {SocialData.map((socio) => (
                   <a href={socio.link} target="_blank" rel="noreferrer">
-                    <div className="socialicon">{socio.png}</div>
+                    <motion.div
+                      initial={{ y: 50 }}
+                      whileInView={{ y: 0 }}
+                      transition={{
+                        duration: 0.5,
+                        type: "spring",
+                        bounce: 1,
+                        delay: 0.1,
+                      }}
+                      className="socialicon"
+                    >
+                      {socio.png}
+                    </motion.div>
                   </a>
                 ))}
               </div>
@@ -109,3 +147,4 @@ const Contactme = () => {
 };
 
 export default Contactme;
+ 

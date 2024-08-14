@@ -3,25 +3,6 @@
   color: white;
 }
 
-.title {
-  color: white;
-  font-size: 50px;
-  font-weight: 900;
-  font-family: Montserrat, sans-serif;
-  margin-top: 40px;
-}
-
-.mtitle {
-  display: none;
-}
-
-.titlediv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 15vh;
-}
 
 .design {
   display: flex;
@@ -34,13 +15,6 @@
   color: yellow;
 }
 
-.underscore {
-  background-color: white;
-  height: 10px;
-  width: 250px;
-  margin: 0px 10px;
-  border-radius: 5px;
-}
 
 .underscore2 {
   background-color: white;
@@ -168,3 +142,4 @@
   flex-direction: column;
   margin-left: 1%;
 }
+ 

@@ -1,0 +1,46 @@
+.underscore {
+  background-color: white;
+  height: 10px;
+  width: 250px;
+  margin: 0px 10px;
+  border-radius: 5px;
+}
+
+.title {
+  color: white;
+  font-size: 50px;
+  font-weight: 900;
+  font-family: Montserrat, sans-serif;
+  margin-top: 40px;
+}
+
+.titlediv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 15vh;
+}
+
+.mtitle {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .underscore {
+    width: 160px;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .mtitle {
+    display: block;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: Montserrat, sans-serif;
+    margin-top: 10px;
+  }
+}

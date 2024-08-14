@@ -1,21 +1,15 @@
 import "./education.css";
-import { Card, CardMedia, CardContent, Typography } from "@mui/material";
+import { Card, CardMedia, CardContent } from "@mui/material";
 import sav from "../../assets/sav.png";
 import sastra from "../../assets/sastra.png";
 import srivv from "../../assets/srivv.png";
+import Title from "../title/Title";
+import { motion } from "framer-motion";
 
 const Education = () => {
   return (
     <div className="education">
-      <div className="titlediv">
-        <div className="title">Education</div>
-        <div className="mtitle">Education</div>
-        <div className="design">
-          <div className="dot"></div>
-          <div className="underscore"></div>
-          <div className="dot"></div>
-        </div>
-      </div>
+      <Title title="Education" underscore="underscore" />
 
       <div className="content">
         <div
@@ -25,20 +19,56 @@ const Education = () => {
           <div className="row w-100" style={{ marginTop: "5%" }}>
             <div className="custom-col"></div>
             <p className="icon">&#10004;</p>
-            <div className="underscore2"></div>
+            <motion.div
+              initial={{ scale: 0, x: -100 }}
+              whileInView={{ scale: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                bounce: 0.2,
+                duration: 1,
+                delay: 0.1,
+              }}
+              className="underscore2"
+            ></motion.div>
             <p className="icon">&#10004;</p>
-            <div className="underscore2"></div>
+            <motion.div
+              initial={{ scale: 0, x: 100 }}
+              whileInView={{ scale: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                bounce: 0.2,
+                duration: 1,
+                delay: 0.1,
+              }}
+              className="underscore2"
+            ></motion.div>
             <p className="icon">&#10004;</p>
             <div className="custom-col"></div>
           </div>
           <div className="schools row">
             <div className="col-12 col-lg-3 col-md-3">
               <div className="d-flex justify-content-center flex-column">
-                <div className="year">2017</div>
-                <Card>
-                  <div
+                <motion.div
+                  initial={{ x: -50, scale: 0 }}
+                  whileInView={{ x: 0, scale: 1 }}
+                  transition={{
+                    delay: 0.05,
+                    duration: 0.1,
+                  }}
+                  className="year"
+                >
+                  2017
+                </motion.div>
+                <Card style={{ background: "rgb(30, 30, 30)" }}>
+                  <motion.div
+                    initial={{ rotatex: -180, y: 100 }}
+                    whileInView={{ rotateY: 0, y: 0 }}
+                    transition={{
+                      type: "spring",
+                      bounce: 0.2,
+                      duration: 0.3,
+                    }}
                     className="d-flex justify-content-center"
-                    style={{ background: "rgb(30, 30, 30)" }}
                   >
                     <CardMedia
                       component="img"
@@ -50,7 +80,7 @@ const Education = () => {
                         objectFit: "fill",
                       }}
                     />
-                  </div>
+                  </motion.div>
 
                   <CardContent
                     sx={{
@@ -58,33 +88,62 @@ const Education = () => {
                       color: "white",
                     }}
                   >
-                    <Typography
-                      gutterBottom
-                      variant="h5"
-                      className="text-center"
-                      component="div"
+                    <motion.div
+                      initial={{ rotatex: -180, y: 100, opacity: 0 }}
+                      whileInView={{ rotateY: 0, y: 0, opacity: 1 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.3,
+                        delay: 0.2,
+                      }}
+                      className="h4 text-center mb-3 font-weight-bold"
                     >
                       Sri Akilandeswari vidhyalaya
-                    </Typography>
-                    <Typography
+                    </motion.div>
+                    <motion.div
                       color="white"
-                      className="text-center"
-                      variant="body2"
+                      className="text-center h6 font-weight-normal"
+                      initial={{ rotatex: -180, y: 50, opacity: 0 }}
+                      whileInView={{ rotateY: 0, y: 0, opacity: 1 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.3,
+                        delay: 0.5,
+                      }}
                     >
                       A school where I had more fun and friends than focus on
                       academics.
-                    </Typography>
+                    </motion.div>
                   </CardContent>
                 </Card>
               </div>
             </div>
             <div className="col-12 col-lg-3 col-md-3">
               <div className="d-flex flex-column">
-                <div className="year">2019</div>
-                <Card>
-                  <div
+                <motion.div
+                  className="year"
+                  initial={{ y: -100, scale: 0 }}
+                  whileInView={{ y: 0, scale: 1 }}
+                  transition={{
+                    delay: 0.04,
+                    duration: 0.1,
+                  }}
+                >
+                  2019
+                </motion.div>
+
+                <Card style={{ background: "rgb(30, 30, 30)" }}>
+                  <motion.div
                     className="d-flex justify-content-center"
-                    style={{ background: "rgb(30, 30, 30)" }}
+                    initial={{ rotatex: -180, y: 50, opacity: 0 }}
+                    whileInView={{ rotateY: 0, y: 0, opacity: 1 }}
+                    transition={{
+                      type: "spring",
+                      bounce: 0.2,
+                      duration: 0.3,
+                    }}
                   >
                     <CardMedia
                       component="img"
@@ -96,7 +155,7 @@ const Education = () => {
                         objectFit: "fill",
                       }}
                     />
-                  </div>
+                  </motion.div>
                   <CardContent
                     sx={{
                       background: "rgb(30, 30, 30);",
@@ -104,28 +163,60 @@ const Education = () => {
                       color: "white",
                     }}
                   >
-                    <Typography
-                      className="text-center"
-                      gutterBottom
-                      variant="h5"
-                      component="div"
+                    <motion.div
+                      initial={{ rotatex: -180, y: 50, opacity: 0 }}
+                      whileInView={{ rotateY: 0, y: 0, opacity: 1 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.3,
+                        delay: 0.2,
+                      }}
+                      className="h4 text-center mb-3 font-weight-bold"
                     >
                       Sri Vageesha Vidhyashram
-                    </Typography>
-                    <Typography className="text-center" variant="body2">
+                    </motion.div>
+                    <motion.div
+                      color="white"
+                      className="text-center h6 font-weight-normal"
+                      initial={{ rotatex: -180, y: 50, opacity: 0 }}
+                      whileInView={{ rotateY: 0, y: 0, opacity: 1 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.3,
+                        delay: 0.5,
+                      }}
+                    >
                       More studies and less fun phase. Still wasn't mehhh
-                    </Typography>
+                    </motion.div>
                   </CardContent>
                 </Card>
               </div>
             </div>
             <div className="col-12 col-lg-3 col-md-3">
               <div className="d-flex justify-content-center flex-column">
-                <div className="year">2023</div>
-                <Card>
-                  <div
+                <motion.div
+                  className="year"
+                  initial={{ x: 100, scale: 0 }}
+                  whileInView={{ x: 0, scale: 1 }}
+                  transition={{
+                    delay: 0.04,
+                    duration: 0.1,
+                  }}
+                >
+                  2023
+                </motion.div>
+                <Card style={{ background: "rgb(30, 30, 30)" }}>
+                  <motion.div
                     className="d-flex justify-content-center"
-                    style={{ background: "rgb(30, 30, 30)" }}
+                    initial={{ rotatex: -180, y: 100 }}
+                    whileInView={{ rotateY: 0, y: 0 }}
+                    transition={{
+                      type: "spring",
+                      bounce: 0.2,
+                      duration: 0.3,
+                    }}
                   >
                     <CardMedia
                       component="img"
@@ -137,25 +228,41 @@ const Education = () => {
                         objectFit: "fill",
                       }}
                     />
-                  </div>
+                  </motion.div>
                   <CardContent
                     sx={{
                       background: "rgb(30, 30, 30);",
                       color: "white",
                     }}
                   >
-                    <Typography
-                      className="text-center"
-                      gutterBottom
-                      variant="h6"
-                      component="div"
+                    <motion.div
+                      initial={{ rotatex: -180, y: 100, opacity: 0 }}
+                      whileInView={{ rotateY: 0, y: 0, opacity: 1 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.3,
+                        delay: 0.2,
+                      }}
+                      className="h4 text-center mb-3 font-weight-bold"
                     >
                       SASTRA DEEMED UNIVERSITY
-                    </Typography>
-                    <Typography className="text-center" variant="body2">
+                    </motion.div>
+                    <motion.div
+                      color="white"
+                      className="text-center h6 font-weight-normal"
+                      initial={{ rotatex: -180, y: 50, opacity: 0 }}
+                      whileInView={{ rotateY: 0, y: 0, opacity: 1 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.3,
+                        delay: 0.5,
+                      }}
+                    >
                       A college experience that felt 75% like what you see in
                       the movies.
-                    </Typography>
+                    </motion.div>
                   </CardContent>
                 </Card>
               </div>
@@ -167,52 +274,172 @@ const Education = () => {
         <div className="d-flex flex-row">
           <div className="timeline">
             <p className="icon">&#10004;</p>
-            <div className="underscore3"></div>
+            <motion.div
+              initial={{ scale: 0, x: -10 }}
+              whileInView={{ scale: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                bounce: 0.2,
+                duration: 1,
+              }}
+              className="underscore3"
+            ></motion.div>
             <p className="icon">&#10004;</p>
-            <div className="underscore3"></div>
+            <motion.div
+              initial={{ scale: 0, x: -10 }}
+              whileInView={{ scale: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                bounce: 0.2,
+                duration: 1,
+              }}
+              className="underscore3"
+            ></motion.div>
             <p className="icon">&#10004;</p>
           </div>
           <div className="mschools">
             <div className="d-flex flex-row align-items-center">
-              <div className="year">2017</div>
-              <div className="mcontain">
-                <div className="d-flex align-items-center justify-content-center">
+              <motion.div
+                className="year"
+                initial={{ x: -10, scale: 0 }}
+                whileInView={{ x: 0, scale: 1 }}
+                transition={{
+                  delay: 0.04,
+                  duration: 0.1,
+                }}
+              >
+                2017
+              </motion.div>
+              <motion.div
+                className="mcontain"
+                initial={{ x: 20, scale: 0 }}
+                whileInView={{ x: 0, scale: 1 }}
+                transition={{
+                  delay: 0.04,
+                  duration: 0.1,
+                }}
+              >
+                <motion.div
+                  className="d-flex align-items-center justify-content-center"
+                  initial={{ rotatex: 180 }}
+                  whileInView={{ rotatexx: 0 }}
+                  transition={{
+                    delay: 0.04,
+                    duration: 0.1,
+                  }}
+                >
                   <img src={sav} alt="sav" height="70%" width="70%" />
-                </div>
+                </motion.div>
                 <div className="msname">SAV</div>
-              </div>
+              </motion.div>
 
-              <div className="mtext">
+              <motion.div
+                className="mtext"
+                initial={{ x: 10 }}
+                whileInView={{ x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  duration: 0.1,
+                }}
+              >
                 A school where I had more fun and friends than focus on
                 academics.
-              </div>
+              </motion.div>
             </div>
             <div className="d-flex flex-row align-items-center srivv">
-              <div className="year">2019</div>
-              <div className="mcontain">
-                <div className="d-flex align-items-center justify-content-center">
-                  <img src={srivv} alt="sav" height="70%" width="70%"/>
-                </div>
+              <motion.div
+                className="year"
+                initial={{ x: -10, scale: 0 }}
+                whileInView={{ x: 0, scale: 1 }}
+                transition={{
+                  delay: 0.04,
+                  duration: 0.1,
+                }}
+              >
+                2019
+              </motion.div>
+              <motion.div
+                className="mcontain"
+                initial={{ x: 20, scale: 0 }}
+                whileInView={{ x: 0, scale: 1 }}
+                transition={{
+                  delay: 0.04,
+                  duration: 0.1,
+                }}
+              >
+                <motion.div
+                  className="d-flex align-items-center justify-content-center"
+                  initial={{ rotatex: 180 }}
+                  whileInView={{ rotatexx: 0 }}
+                  transition={{
+                    delay: 0.04,
+                    duration: 0.1,
+                  }}
+                >
+                  <img src={srivv} alt="sav" height="70%" width="70%" />
+                </motion.div>
                 <div className="msname">SVV</div>
-              </div>
+              </motion.div>
 
-              <div className="mtext">
+              <motion.div
+                className="mtext"
+                initial={{ x: 10 }}
+                whileInView={{ x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  duration: 0.1,
+                }}
+              >
                 More studies and less fun phase. Still wasn't mehhh
-              </div>
+              </motion.div>
             </div>
             <div className="d-flex flex-row align-items-center">
-              <div className="year">2023</div>
-              <div className="mcontain">
-                <div className="d-flex align-items-center justify-content-center">
+              <motion.div
+                className="year"
+                initial={{ x: -10, scale: 0 }}
+                whileInView={{ x: 0, scale: 1 }}
+                transition={{
+                  delay: 0.04,
+                  duration: 0.1,
+                }}
+              >
+                2023
+              </motion.div>
+              <motion.div
+                className="mcontain"
+                initial={{ x: 20, scale: 0 }}
+                whileInView={{ x: 0, scale: 1 }}
+                transition={{
+                  delay: 0.04,
+                  duration: 0.1,
+                }}
+              >
+                <motion.div
+                  className="d-flex align-items-center justify-content-center"
+                  initial={{ rotatex: 180 }}
+                  whileInView={{ rotatexx: 0 }}
+                  transition={{
+                    delay: 0.04,
+                    duration: 0.1,
+                  }}
+                >
                   <img src={sastra} alt="sav" height="70%" width="70%" />
-                </div>
+                </motion.div>
                 <div className="msname">SASTRA</div>
-              </div>
+              </motion.div>
 
-              <div className="mtext">
+              <motion.div
+                className="mtext"
+                initial={{ x: 10 }}
+                whileInView={{ x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  duration: 0.1,
+                }}
+              >
                 A college experience that felt 75% like what you see in the
                 movies.
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
