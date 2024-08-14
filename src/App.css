@@ -7,6 +7,9 @@ html {
   scroll-behavior: smooth !important;
 }
 
+.knowme {
+  overflow: hidden;
+}
 
 .home {
   height: 100vh;

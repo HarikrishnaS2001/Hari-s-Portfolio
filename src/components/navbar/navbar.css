@@ -10,16 +10,24 @@
   color: white;
 }
 
+.bsonly {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+}
+
 .navbar-toggler {
   color: white;
   display: none;
   position: fixed;
+  top: 0;
 }
 
-.navbar.hidden{
+.navbar.hidden {
   top: -60px;
 }
-
 
 .menu {
   display: flex;
@@ -48,7 +56,11 @@
     height: 40px;
   }
 
-  .navbar{
+  .bsonly {
+    display: none;
+  }
+
+  .navbar {
     height: 40px;
   }
 
@@ -70,10 +82,10 @@
     display: block;
   }
 
-  .menuitem{
+  .menuitem {
     width: 100%;
     text-align: center;
-    padding-block:5px ;
+    padding-block: 5px;
   }
 
   .menu.close {

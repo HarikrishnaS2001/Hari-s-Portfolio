@@ -6,6 +6,10 @@
   border-radius: 5px;
 }
 
+.experience {
+  overflow: hidden;
+}
+
 .expcards {
   height: 70%;
   width: 90%;
@@ -92,7 +96,6 @@
   font-size: 1rem;
   font-weight: 900;
   color: white;
-
 }
 
 .mtimeyear2 {
@@ -103,7 +106,6 @@
   font-size: 1rem;
   font-weight: 900;
   color: white;
-
 }
 
 .timeyear2 {
@@ -115,7 +117,6 @@
   font-size: 2rem;
   font-weight: 900;
   color: white;
-
 }
 
 .work1 {

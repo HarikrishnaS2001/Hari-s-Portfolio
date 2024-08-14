@@ -11,7 +11,7 @@ const CustomNavbar = () => {
       height: "100vh",
       opacity: 1,
       transition: {
-        duration: 0.5, 
+        duration: 0.5,
       },
     },
     closed: {
@@ -50,35 +50,99 @@ const CustomNavbar = () => {
 
   return (
     <div className={`navbar ${showNavbar ? "" : "hidden"}`}>
-      <button onClick={toggleNavbar} className="navbar-toggler">
-        ☰
-      </button>
-      <motion.div
-        className={`menu ${isOpen ? "open" : "close"}`}
-        variants={menuVariants} // Apply the variants
-        initial="closed" // Set the initial state to closed
-        animate={isOpen ? "open" : "closed"} // Animate based on isOpen
-      >
-        {" "}
-        <a href="#home" className="menuitem" onClick={closeNavbar}>
+      <div className="sonly">
+        <button onClick={toggleNavbar} className="navbar-toggler">
+          ☰
+        </button>
+        <motion.div
+          className={`menu ${isOpen ? "open" : "close"}`}
+          variants={menuVariants}
+          initial="closed"
+          animate={isOpen ? "open" : "closed"}
+        >
+          <a href="#home" className="menuitem" onClick={closeNavbar}>
+            Home
+          </a>
+          <a href="#education" className="menuitem" onClick={closeNavbar}>
+            Education
+          </a>
+          <a href="#skills" className="menuitem" onClick={closeNavbar}>
+            Skills
+          </a>
+          <a href="#experience" className="menuitem" onClick={closeNavbar}>
+            Experience
+          </a>
+          <a href="#knowme" className="menuitem" onClick={closeNavbar}>
+            Know Me
+          </a>
+          <a href="#contactme" className="menuitem" onClick={closeNavbar}>
+            Contact Me
+          </a>
+        </motion.div>
+      </div>
+
+      <div className="bsonly">
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          href="#home"
+          className="menuitem"
+          onClick={closeNavbar}
+        >
           Home
-        </a>
-        <a href="#education" className="menuitem" onClick={closeNavbar}>
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          href="#education"
+          className="menuitem"
+          onClick={closeNavbar}
+        >
           Education
-        </a>
-        <a href="#skills" className="menuitem" onClick={closeNavbar}>
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          href="#skills"
+          className="menuitem"
+          onClick={closeNavbar}
+        >
           Skills
-        </a>
-        <a href="#experience" className="menuitem" onClick={closeNavbar}>
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          href="#experience"
+          className="menuitem"
+          onClick={closeNavbar}
+        >
           Experience
-        </a>
-        <a href="#knowme" className="menuitem" onClick={closeNavbar}>
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          href="#knowme"
+          className="menuitem"
+          onClick={closeNavbar}
+        >
           Know Me
-        </a>
-        <a href="#contactme" className="menuitem" onClick={closeNavbar}>
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          href="#contactme"
+          className="menuitem"
+          onClick={closeNavbar}
+        >
           Contact Me
-        </a>
-      </motion.div>
+        </motion.a>
+      </div>
     </div>
   );
 };
