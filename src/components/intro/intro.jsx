@@ -1,32 +1,89 @@
 import "./intro.css";
 import hari from "../../assets/Hari.png";
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
+import {  motion } from "framer-motion";
 
 const Intro = () => {
   return (
-    <div className="intro">
-      <div className="introContent">
-        <div className="parah1">
+    <div
+      className="intro"
+    >
+      <div
+        className="introContent"
+      >
+        <motion.div
+          className="parah1"
+          initial={{ opacity: 0, scale: 1, x: -40 }}
+          whileInView={{ scale: 1, opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.2,
+            delay: 0.5,
+            type: "tween",
+            stiffness: 20,
+          }}
+        >
           <div>Hiiii</div>
-          <div>
-            I am <span className="yellow">Hari</span>
+          <div className="d-flex flex-row">
+            I am
+            <motion.div
+              className="yellow"
+              style={{ marginLeft: "1.5rem" }}
+              initial={{ y: 0 }}
+              animate={{ y: [0, 2, 0, -2, 0] }}
+              transition={{
+                times: [0, 0.25, 0.5, 0.75, 1],
+                duration: 1,
+                repeat: Infinity,
+              }}
+            >
+              Hari
+            </motion.div>
           </div>
-        </div>
-        <div className="parah2">
+        </motion.div>
+        <motion.div
+          className="parah2"
+          initial={{ opacity: 0, scale: 1, x: 40 }}
+          whileInView={{ scale: 1, opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.1,
+            delay: 0.7,
+            type: "tween",
+            stiffness: 20,
+          }}
+        >
           I like <span className="yellow">coding</span> and have an enthusiasm
           towards <span className="yellow">tech</span>
-        </div>
-        <div className="parah3">
+        </motion.div>
+        <motion.div
+          className="parah3"
+          initial={{ opacity: 0, scale: 1, x: -40 }}
+          whileInView={{ scale: 1, opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.1,
+            delay: 0.7,
+            type: "tween",
+            stiffness: 20,
+          }}
+        >
           <TypingAnimation
             text="Trying to be a better coder and a learner everyday"
             speed={100}
-            delay={2000}
           />
-        </div>
+        </motion.div>
       </div>
-      <div className="imageContainer">
+      <motion.div
+        className="imageContainer"
+        initial={{ opacity: 0, scale: 1, y: 400 }}
+        whileInView={{ scale: 1, opacity: 100, y: 0 }}
+        transition={{
+          duration: 0.1,
+          delay: 1.2,
+          type: "tween",
+          stiffness: 20,
+        }}
+      >
         <img src={hari} alt="hari" className="image" />
-      </div>
+      </motion.div>
     </div>
   );
 };
