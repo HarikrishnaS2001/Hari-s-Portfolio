@@ -7,8 +7,6 @@ import comic4 from "../../assets/comicimg4.jpeg";
 import comic5 from "../../assets/comicimg5.JPG";
 import comic6 from "../../assets/comicimg6.jpeg";
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
-import comic7 from "../../assets/comicimg8.jpeg";
-import comic8 from "../../assets/comicimg9.jpeg";
 import { Warning} from "@mui/icons-material";
 
 const Me = () => {
