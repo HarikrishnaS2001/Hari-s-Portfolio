@@ -1,9 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import './navbar.css';
+import React, { useState, useEffect } from "react";
+import "./navbar.css";
+import { motion } from "framer-motion";
 
 const CustomNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
+
+  const menuVariants = {
+    open: {
+      height: "100vh",
+      opacity: 1,
+      transition: {
+        duration: 0.5, 
+      },
+    },
+    closed: {
+      height: 0,
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -23,19 +41,25 @@ const CustomNavbar = () => {
 
   useEffect(() => {
     if (window.innerWidth > 992) {
-      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener("mousemove", handleMouseMove);
     }
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
   return (
-    <div className={`navbar ${showNavbar ? '' : 'hidden'}`}>
+    <div className={`navbar ${showNavbar ? "" : "hidden"}`}>
       <button onClick={toggleNavbar} className="navbar-toggler">
         ☰
       </button>
-      <div className={`menu ${isOpen ? 'open' : 'close'}`}>
+      <motion.div
+        className={`menu ${isOpen ? "open" : "close"}`}
+        variants={menuVariants} // Apply the variants
+        initial="closed" // Set the initial state to closed
+        animate={isOpen ? "open" : "closed"} // Animate based on isOpen
+      >
+        {" "}
         <a href="#home" className="menuitem" onClick={closeNavbar}>
           Home
         </a>
@@ -54,7 +78,7 @@ const CustomNavbar = () => {
         <a href="#contactme" className="menuitem" onClick={closeNavbar}>
           Contact Me
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 };
