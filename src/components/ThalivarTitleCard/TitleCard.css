@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Noto+Serif+Vithkuqi:wght@400;500;600;700&display=swap");
+
+.center {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  overflow: hidden;
+}
+
+.outro{
+  background: rgb(30, 30, 30);
+  position: absolute;
+  border-radius: 15px;
+  height: 40px;
+  width: 40px;  
+  z-index: 4;
+}
+
+.title-card {
+  min-width: 90%;
+  height: 80%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  perspective: 500px;
+}
+
+.blur1 {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 3;
+}
+
+.blur2 {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 3;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 160px;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.dots::before {
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 200px;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.5) 0.5mm,
+    transparent 0.5mm,
+    transparent 1mm
+  );
+  background-size: 60px 70px;
+  background-position: center;
+  z-index: -1;
+}
+
+.dots span {
+  width: 100%;
+  height: 100%;
+  font-family: "codystar";
+  font-size: 140px;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+}
+
+.rowt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  height: 150px;
+  z-index: 2;
+  animation-fill-mode: both;
+}
+
+.text {
+  font-family: "Noto Serif Vithkuqi";
+  font-weight: 900;
+  font-size: 100px;
+  color: yellow;
+  text-shadow: 5px 5px #ff0000;
+  z-index: 3;
+  letter-spacing: 10px;
+}
+
+.introducing {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  background-color: black;
+  color: white;
+  color: "white";
+  font-size: 48px;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 992px)  {
+  .blur1,
+  .blur2 {
+    width: 5%;
+  }
+
+
+.dots {
+    width: 30px;
+    height: 90px;
+  }
+
+
+
+.dots::before {
+    width: 40px;
+    height: 200px;
+    background-size: 70px 70px;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  .dots span {
+    width: 100%;
+    height: 100%;
+    font-family: "codystar";
+    font-size: 30px;
+    text-align: center;
+    font-weight: 900;
+    color: white;
+  }
+
+}
