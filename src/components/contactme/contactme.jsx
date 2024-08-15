@@ -1,7 +1,7 @@
 import React from "react";
 import "./contactme.css";
 import MovingIcon from "@mui/icons-material/Moving";
-import resume from "../../assets/comicimg6.jpeg";
+import resume from "../../assets/HariResumewithPhoto.pdf";
 import telephone from "../../assets/telephone.png";
 import github from "../../assets/github-sign.png";
 import insta from "../../assets/instagram.png";

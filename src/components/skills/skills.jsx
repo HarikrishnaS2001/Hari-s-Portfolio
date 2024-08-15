@@ -131,12 +131,6 @@ const Skills = () => {
       proficiency: "90%",
     },
     {
-      name: "Dynamo",
-      imageUrl:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dynamodb/dynamodb-original.svg",
-      proficiency: "55%",
-    },
-    {
       name: "JEST",
       imageUrl:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
