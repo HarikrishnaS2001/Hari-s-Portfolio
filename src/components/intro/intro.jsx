@@ -68,6 +68,7 @@ const Intro = () => {
           <TypingAnimation
             text="Trying to be a better coder and a learner everyday"
             speed={100}
+            delay={4000}
           />
         </motion.div>
       </div>

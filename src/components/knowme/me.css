@@ -4,12 +4,12 @@
 
 .knowme {
   font-family: "Permanent Marker", cursive;
-  min-height: 100vh;
+  min-height: 100dvh;
   color: white;
 }
 
 .lapview {
-  height: 100vh;
+  height: 100dvh;
   background: rgb(30, 30, 30);
   background: rgb(30, 30, 30);
   color: white;
@@ -117,16 +117,7 @@
   /* border: 2px white solid; */
   /* border: 2px rgb(76, 76, 76) solid; */
 }
-/* body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  color: black;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-} */
+
 
 .dialogue-container {
   width: 100%;
@@ -277,7 +268,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100dvh;
   text-align: center;
   color: white;
   font-weight: 700;
