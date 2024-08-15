@@ -120,7 +120,7 @@ const Contactme = () => {
             <div className="social">
               <div className="res">Feel free to reach out to me at</div>
               <div className="d-flex flex-row justify-content-around h-100 w-100">
-                {SocialData.map((socio) => (
+                {SocialData.map((socio , i) => (
                   <a href={socio.link} target="_blank" rel="noreferrer">
                     <motion.div
                       initial={{ y: 50 }}
@@ -128,8 +128,8 @@ const Contactme = () => {
                       transition={{
                         duration: 0.5,
                         type: "spring",
-                        bounce: 1,
-                        delay: 0.1,
+                        bounce: 0.3,
+                        delay: 0.1 *i ,
                       }}
                       className="socialicon"
                     >
