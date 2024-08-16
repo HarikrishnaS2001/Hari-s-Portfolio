@@ -19,6 +19,17 @@
   box-sizing: border-box;
 }
 
+
+.skillcards {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+.skillcards::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
 .skillstitle {
   display: flex;
   width: 80%;
@@ -145,6 +156,16 @@
   width: 100%;
   display: none;
   flex-direction: column;
+}
+
+.App {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+.App::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 @media (max-width: 767px) {

@@ -1,5 +1,5 @@
 import "./intro.css";
-import hari from "../../assets/Hari.png";
+import hari from "../../assets/hari.png";
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
 import {  motion } from "framer-motion";
 

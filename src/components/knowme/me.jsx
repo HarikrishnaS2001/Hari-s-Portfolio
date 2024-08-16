@@ -4,7 +4,7 @@ import comic1 from "../../assets/comicimg1.png";
 import comic2 from "../../assets/comicimg2.jpeg";
 import comic3 from "../../assets/comicimg3.jpeg";
 import comic4 from "../../assets/comicimg4.jpeg";
-import comic5 from "../../assets/comicimg5.JPG";
+import comic5 from "../../assets/comicimg5.jpeg";
 import comic6 from "../../assets/comicimg6.jpeg";
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
 import { Warning } from "@mui/icons-material";
