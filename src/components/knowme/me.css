@@ -23,7 +23,6 @@
 }
 
 .comic1,.comic2,.comic5,.comic4,.comic3,.comic6{
-  /* max-width: 210px; */
   object-fit: cover;
 }
 

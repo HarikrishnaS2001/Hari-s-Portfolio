@@ -2,7 +2,7 @@
 
 .center {
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,8 +20,8 @@
 }
 
 .title-card {
-  min-width: 90%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
   align-items: center;
@@ -54,10 +54,11 @@
 
 .dots {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 120px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
   background: transparent;
   position: relative;
   z-index: 2;
@@ -66,44 +67,51 @@
 .dots::before {
   position: absolute;
   content: "";
-  width: 150px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   background-image: radial-gradient(
     rgba(255, 255, 255, 0.5) 0.5mm,
     transparent 0.5mm,
     transparent 1mm
   );
-  background-size: 60px 70px;
+  background-size: 60px 60px;
   background-position: center;
   z-index: -1;
 }
 
-.dots span {
-  width: 100%;
-  height: 100%;
+.starfont {
   font-family: "codystar";
   font-size: 140px;
   text-align: center;
   font-weight: 500;
   color: white;
+  margin-inline: 1rem;
 }
 
-.rowt {
+.rowt,
+.rowlt {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 30%;
+  width: 100%;
+}
+
+.rowmt {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
   width: 100%;
 }
 
 .name {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(-50%, -50%);
   height: 150px;
   z-index: 2;
   animation-fill-mode: both;
@@ -112,7 +120,7 @@
 .text {
   font-family: "Noto Serif Vithkuqi";
   font-weight: 900;
-  font-size: 100px;
+  font-size: 120px;
   color: yellow;
   text-shadow: 5px 5px #ff0000;
   z-index: 3;
@@ -132,32 +140,38 @@
   font-family: Arial, sans-serif;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) and (min-width: 768px) {
   .blur1,
   .blur2 {
     width: 5%;
   }
 
-  .dots {
-    width: 30px;
-    height: 90px;
+  .starfont {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blur1,
+  .blur2 {
+    width: 5%;
   }
 
-  .dots::before {
-    width: 40px;
-    height: 200px;
-    background-size: 70px 70px;
-    background-position: center;
-    z-index: -1;
+  .starfont {
+    font-size: 40px;
+    margin-inline: 0.3rem;
   }
 
-  .dots span {
-    width: 100%;
-    height: 100%;
-    font-family: "codystar";
-    font-size: 30px;
-    text-align: center;
-    font-weight: 900;
-    color: white;
+  .text {
+    font-size: 80px;
+    text-shadow: 3px 3px #ff0000;
+  }
+
+  .rowmt {
+    display: flex;
+  }
+
+  .rowlt {
+    display: none;
   }
 }
