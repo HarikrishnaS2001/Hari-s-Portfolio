@@ -1,16 +1,12 @@
 import "./intro.css";
-import hari from "../../assets/hari.png";
+import hari from "../../assets/Hari.png";
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Intro = () => {
   return (
-    <div
-      className="intro"
-    >
-      <div
-        className="introContent"
-      >
+    <div className="intro">
+      <div className="introContent">
         <motion.div
           className="parah1"
           initial={{ opacity: 0, scale: 1, x: -40 }}
