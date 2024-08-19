@@ -79,5 +79,6 @@
   }
   .intro {
     margin-top: 60px;
+    height: calc(100dvh - 40px);
   }
 }
