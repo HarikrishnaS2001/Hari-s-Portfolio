@@ -17,9 +17,6 @@ html {
   overflow: hidden;
 }
 
-.classsec {
-  -webkit-overflow-scroll: touch;
-}
 
 @media (min-width: 768px) {
   .classsec {
