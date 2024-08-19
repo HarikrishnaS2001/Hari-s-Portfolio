@@ -12,36 +12,26 @@ html {
 }
 
 .home {
+  height: 100dvh;
   width: 100%;
   overflow: hidden;
 }
-
-.dvh100{
-  height: 100vh;
-}
-
-@supports (-webkit-touch-callout: none) {
-  /* CSS specific to iOS devices */.dvh100 {
-    height: -webkit-fill-available;
-  }
-}
-
-/* Hide scrollbar but allow scrolling */
 .classsec {
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
-  overflow-y: scroll;
-}
-
-.classsec::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
+  -webkit-overflow-scroll: touch;
 }
 
 @media (min-width: 768px) {
   .classsec {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100dvh;
+  }
+
+  .classsec::-webkit-scrollbar {
+    display: none;
   }
 
   section {
