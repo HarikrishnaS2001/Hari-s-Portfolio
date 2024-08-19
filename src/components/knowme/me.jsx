@@ -84,7 +84,13 @@ const Me = () => {
                 className="sports gochi"
               >
                 <div>Football❤️</div>
-                <img src={comic5} className="comic5" alt="comic5" height="90%" width="85%" />
+                <img
+                  src={comic5}
+                  className="comic5"
+                  alt="comic5"
+                  height="90%"
+                  width="85%"
+                />
               </motion.div>
 
               <motion.div
@@ -99,7 +105,14 @@ const Me = () => {
                 className="movies"
               >
                 <div className="w-100 ">
-                  <img src={comic2} alt="comic2" className="comic2" height='100%' width='100%' />
+                  <img
+                    src={comic2}
+                    alt="comic2"
+                    className="comic2"
+                    height="100%"
+                    width="100%"
+                    objectFit="cover"
+                  />
                 </div>
                 <div
                   className="w-100 text-center hanalei"
@@ -130,7 +143,13 @@ const Me = () => {
                     className="d-flex justify-content-center align-items-center w-100 h-50"
                     style={{ objectFit: "cover" }}
                   >
-                    <img src={comic4} alt="comic4" className="comic4" height="100%" width="100%" />
+                    <img
+                      src={comic4}
+                      alt="comic4"
+                      className="comic4"
+                      height="100%"
+                      width="100%"
+                    />
                   </div>
                   <div
                     className="w-100 h-50 d-flex justify-content-center align-items-center"
@@ -146,7 +165,13 @@ const Me = () => {
                   className="w-50 h-100 d-flex justify-content-center align-items-center"
                   style={{ objectFit: "cover" }}
                 >
-                  <img src={comic3} alt="comic3" className="comic3" height="100%" width="100%" />
+                  <img
+                    src={comic3}
+                    alt="comic3"
+                    className="comic3"
+                    height="100%"
+                    width="100%"
+                  />
                 </div>
               </motion.div>
               <div
@@ -217,7 +242,13 @@ const Me = () => {
                 className=" fitness gochi"
               >
                 Photography
-                <img src={comic6} alt="comic6" className="comic6" height="90%" width="90%"></img>
+                <img
+                  src={comic6}
+                  alt="comic6"
+                  className="comic6"
+                  height="90%"
+                  width="90%"
+                ></img>
               </motion.div>
             </div>
           </div>

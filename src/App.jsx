@@ -20,7 +20,7 @@ function App() {
       ) : (
         <div className="classsec">
           <Navbar />
-          <section className="home" id="home">
+          <section className="home dvh100" id="home">
             <Intro />
           </section>
           <section className="education" id="education">

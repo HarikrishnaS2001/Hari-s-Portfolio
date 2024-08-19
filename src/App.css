@@ -12,9 +12,18 @@ html {
 }
 
 .home {
-  height: 100dvh;
   width: 100%;
   overflow: hidden;
+}
+
+.dvh100{
+  height: 100dvh;
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */.dvh100 {
+    height: -webkit-fill-available;
+  }
 }
 
 /* Hide scrollbar but allow scrolling */
