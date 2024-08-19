@@ -115,11 +115,16 @@ const Me = () => {
                   />
                 </div>
                 <div
-                  className="w-100 text-center hanalei"
-                  style={{ height: "fit-content" }}
+                  className="d-flex align-items-center justify-content-center w-100"
+                  style={{ flexGrow: 1 }}
                 >
-                  Captivated by the magic of the movies, I love films more than
-                  I love myself
+                  <div
+                    className="text-center hanalei"
+                    style={{ height: "fit-content" }}
+                  >
+                    Captivated by the magic of the movies, I love films more
+                    than I love myself
+                  </div>
                 </div>
               </motion.div>
             </div>
