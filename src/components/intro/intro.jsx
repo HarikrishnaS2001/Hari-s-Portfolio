@@ -4,6 +4,9 @@ import TypingAnimation from "../TypingAnimation/TypingAnimation";
 import { motion } from "framer-motion";
 
 const Intro = () => {
+  function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  }
   return (
     <div className="intro">
       <div className="introContent">
@@ -69,7 +72,7 @@ const Intro = () => {
         </motion.div>
       </div>
       <motion.div
-        className="imageContainer"
+        className={`imageContainer ${isIOS() ? "hidden" : ""}`}
         initial={{ opacity: 0, scale: 1, y: 400 }}
         whileInView={{ scale: 1, opacity: 100, y: 0 }}
         transition={{

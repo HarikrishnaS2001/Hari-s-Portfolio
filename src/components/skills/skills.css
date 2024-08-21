@@ -6,11 +6,15 @@
   border-radius: 5px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .skillcards {
   height: 60%;
   width: 90%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: start;
   display: flex;
   border-radius: 5px;
   overflow-x: auto;
@@ -23,6 +27,7 @@
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .skillcards::-webkit-scrollbar {

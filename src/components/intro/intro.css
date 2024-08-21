@@ -68,11 +68,15 @@
   .parah2 {
     font-weight: 700;
     font-size: 2rem;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+      2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
   }
 
   .parah3 {
     font-weight: 700;
     font-size: 0.8rem;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+      2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
   }
   .introContent {
     padding: 1rem;

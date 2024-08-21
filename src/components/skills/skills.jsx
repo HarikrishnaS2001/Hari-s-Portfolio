@@ -262,10 +262,14 @@ const Skills = () => {
     OsetClassName("selectedskill");
   }
 
+  function isSafari() {
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  }
+
   return (
     <div className="skills">
       <Title title="Skills" underscore="underscore4" />
-      <div className="content">
+      <div className={`content ${isSafari() ? " hidden" : ""}`}>
         <div className="skillstitle">
           <motion.div
             className={PLclassName}
@@ -326,7 +330,7 @@ const Skills = () => {
                       style={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "cover",
+                        objectFit: "contain",
                       }}
                     />
                   </motion.div>
@@ -384,7 +388,7 @@ const Skills = () => {
                       style={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "cover",
+                        objectFit: "contain",
                       }}
                     />
                   </motion.div>
@@ -442,7 +446,7 @@ const Skills = () => {
                       style={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "cover",
+                        objectFit: "contain",
                       }}
                     />
                   </motion.div>
@@ -501,7 +505,7 @@ const Skills = () => {
                       style={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "cover",
+                        objectFit: "contain",
                       }}
                     />
                   </motion.div>
@@ -533,6 +537,271 @@ const Skills = () => {
                   </div>
                 </div>
               </motion.div>
+            ))}
+          </div>
+        ) : (
+          <div></div>
+        )}
+      </div>
+      <div className={`content ${isSafari() ? "" : " hidden"}`}>
+        <div className="skillstitle">
+          <motion.div
+            className={PLclassName}
+            onClick={PLpressed}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div>Programming Languages</div>
+          </motion.div>
+          <motion.div
+            className={FEclassName}
+            onClick={FEpressed}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div>Front End</div>
+          </motion.div>
+          <motion.div
+            className={BEclassName}
+            onClick={BEpressed}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div>Back End</div>
+          </motion.div>
+          <motion.div
+            className={OclassName}
+            onClick={Opressed}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div>Others</div>
+          </motion.div>
+        </div>
+        {PLclassName === "selectedskill" ? (
+          <div className="skillcards">
+            {Pskills.map((skills, i) => (
+              <div
+                className="cardz"
+              >
+                <div>
+                  <motion.div
+                    initial={{ rotateX: 180 }}
+                    whileInView={{ rotateX: 0 }}
+                    transition={{ duration: 0.2, delay: (i % 6) * 0.15 }}
+                    className="cardzimage"
+                  >
+                    <img
+                      src={skills.imageUrl}
+                      alt={skills.name}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 1,
+                      delay: (i % 6) * 0.1,
+                      type: "spring",
+                      bounce: 0.3,
+                    }}
+                    className="mt-3 text-center"
+                  >
+                    {skills.name}
+                  </motion.div>
+                  <div className="loader">
+                    <motion.div
+                      className="load"
+                      initial={{ x: -50, opacity: 1 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: (i % 6) * 0.1,
+                      }}
+                      style={{ width: skills.proficiency }}
+                    ></motion.div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div></div>
+        )}
+        {FEclassName === "selectedskill" ? (
+          <div className="skillcards">
+            {FEskills.map((skills, i) => (
+              <div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.1, delay: (i % 6) * 0.1 }}
+                className="cardz"
+              >
+                <div>
+                  <motion.div
+                    initial={{ rotateX: 180 }}
+                    whileInView={{ rotateX: 0 }}
+                    transition={{ duration: 0.2, delay: (i % 6) * 0.15 }}
+                    className="cardzimage"
+                  >
+                    <img
+                      src={skills.imageUrl}
+                      alt={skills.name}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 1,
+                      delay: (i % 6) * 0.1,
+                      type: "spring",
+                      bounce: 0.3,
+                    }}
+                    className="mt-3 text-center"
+                  >
+                    {skills.name}
+                  </motion.div>{" "}
+                  <div className="loader">
+                    <motion.div
+                      className="load"
+                      initial={{ x: -50, opacity: 1 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: (i % 6) * 0.1,
+                      }}
+                      style={{ width: skills.proficiency }}
+                    ></motion.div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div></div>
+        )}
+        {BEclassName === "selectedskill" ? (
+          <div className="skillcards">
+            {BEskills.map((skills, i) => (
+              <div
+                className="cardz"
+              >
+                <div>
+                  <motion.div
+                    initial={{ rotateX: 180 }}
+                    whileInView={{ rotateX: 0 }}
+                    transition={{ duration: 0.2, delay: (i % 6) * 0.15 }}
+                    className="cardzimage"
+                  >
+                    <img
+                      src={skills.imageUrl}
+                      alt={skills.name}
+                      style={{
+                        width: "128px",
+                        height: "96px",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 1,
+                      delay: (i % 6) * 0.1,
+                      type: "spring",
+                      bounce: 0.3,
+                    }}
+                    className="mt-3 text-center"
+                  >
+                    {skills.name}
+                  </motion.div>
+                  <div className="loader">
+                    <motion.div
+                      className="load"
+                      initial={{ x: -50, opacity: 1 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: (i % 6) * 0.1,
+                      }}
+                      style={{ width: skills.proficiency }}
+                    ></motion.div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div></div>
+        )}
+        {OclassName === "selectedskill" ? (
+          <div className="skillcards">
+            {Oskills.map((skills, i) => (
+              <div
+                className="cardz"
+              >
+                <div>
+                  <motion.div
+                    initial={{ rotateX: 180 }}
+                    whileInView={{ rotateX: 0 }}
+                    transition={{ duration: 0.2, delay: (i % 6) * 0.15 }}
+                    className="cardzimage"
+                  >
+                    <img
+                      src={skills.imageUrl}
+                      alt={skills.name}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 1,
+                      delay: (i % 6) * 0.1,
+                      type: "spring",
+                      bounce: 0.3,
+                    }}
+                    className="mt-3 text-center"
+                  >
+                    {skills.name}
+                  </motion.div>
+                  <div className="loader">
+                    <motion.div
+                      className="load"
+                      initial={{ x: -50, opacity: 1 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: (i % 6) * 0.1,
+                      }}
+                      style={{ width: skills.proficiency }}
+                    ></motion.div>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         ) : (
