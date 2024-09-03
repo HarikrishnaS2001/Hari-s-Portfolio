@@ -23,7 +23,7 @@ const Me = () => {
         <div className="d-flex flex-row h-100 w-100">
           <div className="col1">
             <motion.div
-              initial={{ opacity: 0, x: -300 }}
+              initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 duration: 0.1,
@@ -40,7 +40,7 @@ const Me = () => {
             </motion.div>
             <div class="dialogue-container">
               <motion.div
-                initial={{ opacity: 0, x: -300 }}
+                initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
                   duration: 0.2,
@@ -57,7 +57,7 @@ const Me = () => {
               </motion.div>
             </div>
             <motion.div
-              initial={{ opacity: 0, y: 300 }}
+              initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.1,
@@ -73,7 +73,7 @@ const Me = () => {
           <div className="h-100 w-100 d-flex flex-column">
             <div className="row1">
               <motion.div
-                initial={{ opacity: 0, y: -200 }}
+                initial={{ opacity: 0, y: -100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.1,
@@ -94,7 +94,7 @@ const Me = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 800 }}
+                initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
                   duration: 0.3,
@@ -130,7 +130,7 @@ const Me = () => {
             </div>
             <div className="row1">
               <motion.div
-                initial={{ opacity: 0, y: 200 }}
+                initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.1,
