@@ -94,6 +94,7 @@
   width: 75%;
   border-radius: 5px;
   border: white 2px solid;
+  overflow: hidden;
 }
 
 .mmovies {

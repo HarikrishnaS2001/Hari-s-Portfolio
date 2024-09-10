@@ -104,7 +104,7 @@ const Me = () => {
                 }}
                 className="movies"
               >
-                <div className="w-100 ">
+                <div className="w-100" style={{height:'90%'}}>
                   <img
                     src={comic2}
                     alt="comic2"
