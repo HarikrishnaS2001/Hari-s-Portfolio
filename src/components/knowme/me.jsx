@@ -194,28 +194,12 @@ const Me = () => {
                   }}
                   className="music gochi"
                 >
-                  <div className="d-flex flex-column justify-content-between  align-items-stretch h-100">
-                    <div className="h-100">
-                      A.R. Rahman<i class="fa fa-heart"></i>, Ennio Morricone
-                      <i class="fa fa-heart"></i>, and Hans Zimmer
-                      <i class="fa fa-heart"></i>. From the timeless classics of
+                      <p>A.R. Rahman<i class="fa fa-heart"></i>, Ennio Morricone
+                      <i class="fas fa-guitar"></i>, and Hans Zimmer
+                      <i class="fas fa-headphones"></i>. From the timeless classics of
                       Ilaiyaraaja
-                      <i class="fa fa-heart"></i>
-                      to the modern hits of Anirudh<i class="fa fa-heart"></i>
-                    </div>
-                    <div
-                      className="d-flex justify-content-between align-self-end w-100"
-                      style={{ height: "fit-content" }}
-                    >
-                      <i class="fas fa-guitar"></i>
-                      <i class="fas fa-headphones"></i>
-                      <i class="fas fa-play"></i>
-                      <i class="fas fa-music"></i>
-                      <i class="fas fa-sliders-h"></i>
-                      <i class="fas fa-volume-up"></i>
                       <i class="fab fa-spotify"></i>
-                    </div>
-                  </div>
+                      to the modern hits of Anirudh<i class="fas fa-music"></i></p>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}
