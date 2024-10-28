@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './TypingAnimation.css'; // Import CSS for animation
 
 const TypingAnimation = ({ text, speed, delay }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     if (index < text.length) {
@@ -15,11 +14,9 @@ const TypingAnimation = ({ text, speed, delay }) => {
 
       return () => clearTimeout(timer);
     } else {
-      setIsPaused(true);
       const pauseTimer = setTimeout(() => {
         setDisplayedText('');
         setIndex(0);
-        setIsPaused(false);
       }, delay);
 
       return () => clearTimeout(pauseTimer);
