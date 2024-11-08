@@ -8,8 +8,6 @@ const TitleCard = () => {
 
   return (
     <div className="center">
-      <div className="blur1"></div>
-      <div className="blur2"></div>
       <motion.div
         className="title-card"
         initial={{ opacity: 0, scale: 1.1, translateX: 0 }}

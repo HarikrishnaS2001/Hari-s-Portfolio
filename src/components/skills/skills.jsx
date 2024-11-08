@@ -278,7 +278,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div>Programming Languages</div>
+            <div style={{fontFamily:'Quattrocento'}}>Languages</div>
           </motion.div>
           <motion.div
             className={FEclassName}
@@ -287,7 +287,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div>Front End</div>
+            <div style={{fontFamily:'Quattrocento'}}>Front End</div>
           </motion.div>
           <motion.div
             className={BEclassName}
@@ -296,7 +296,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div>Back End</div>
+            <div style={{fontFamily:'Quattrocento'}}>Back End</div>
           </motion.div>
           <motion.div
             className={OclassName}
@@ -305,7 +305,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div>Others</div>
+            <div style={{fontFamily:'Quattrocento'}}>Others</div>
           </motion.div>
         </div>
         {PLclassName === "selectedskill" ? (
@@ -344,6 +344,7 @@ const Skills = () => {
                       bounce: 0.3,
                     }}
                     className="mt-3 text-center"
+                    style={{fontFamily:'Karla'}}
                   >
                     {skills.name}
                   </motion.div>
@@ -402,9 +403,10 @@ const Skills = () => {
                       bounce: 0.3,
                     }}
                     className="mt-3 text-center"
+                    style={{fontFamily:'Karla'}}
                   >
                     {skills.name}
-                  </motion.div>{" "}
+                  </motion.div>
                   <div className="loader">
                     <motion.div
                       className="load"
@@ -461,6 +463,7 @@ const Skills = () => {
                       bounce: 0.3,
                     }}
                     className="mt-3 text-center"
+                    style={{fontFamily:'Karla'}}
                   >
                     {skills.name}
                   </motion.div>
@@ -520,6 +523,7 @@ const Skills = () => {
                       bounce: 0.3,
                     }}
                     className="mt-3 text-center"
+                    style={{fontFamily:'Karla'}}
                   >
                     {skills.name}
                   </motion.div>
@@ -552,7 +556,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div>Programming Languages</div>
+            <div style={{fontFamily:'Quattrocento'}}>Languages</div>
           </motion.div>
           <motion.div
             className={FEclassName}
@@ -561,7 +565,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div>Front End</div>
+            <div style={{fontFamily:'Quattrocento'}}>Front End</div>
           </motion.div>
           <motion.div
             className={BEclassName}
@@ -570,7 +574,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div>Back End</div>
+            <div style={{fontFamily:'Quattrocento'}}>Back End</div>
           </motion.div>
           <motion.div
             className={OclassName}
@@ -579,7 +583,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div>Others</div>
+            <div style={{fontFamily:'Quattrocento'}}>Others</div>
           </motion.div>
         </div>
         {PLclassName === "selectedskill" ? (
@@ -615,6 +619,7 @@ const Skills = () => {
                       bounce: 0.3,
                     }}
                     className="mt-3 text-center"
+                    style={{fontFamily:'Karla'}}
                   >
                     {skills.name}
                   </motion.div>
@@ -673,9 +678,10 @@ const Skills = () => {
                       bounce: 0.3,
                     }}
                     className="mt-3 text-center"
+                    style={{fontFamily:'Karla'}}
                   >
                     {skills.name}
-                  </motion.div>{" "}
+                  </motion.div>
                   <div className="loader">
                     <motion.div
                       className="load"
@@ -729,6 +735,7 @@ const Skills = () => {
                       bounce: 0.3,
                     }}
                     className="mt-3 text-center"
+                    style={{fontFamily:'Karla'}}
                   >
                     {skills.name}
                   </motion.div>
@@ -785,6 +792,7 @@ const Skills = () => {
                       bounce: 0.3,
                     }}
                     className="mt-3 text-center"
+                    style={{fontFamily:'Karla'}}
                   >
                     {skills.name}
                   </motion.div>
@@ -810,7 +818,7 @@ const Skills = () => {
       </div>
       <div className="scontent">
         <div className="mskills">
-          <div className="mskilltitle">Programming Languages</div>
+          <div className="mskilltitle">Languages</div>
           <div className="container">
             <div className="row">
               {Pskills.map((skills, index) => (
@@ -839,9 +847,10 @@ const Skills = () => {
                         bounce: 0.3,
                       }}
                       className="mt-3 text-center"
+                      style={{fontFamily:'Karla'}}
                     >
                       {skills.name}
-                    </motion.div>{" "}
+                    </motion.div>
                     <div className="mloader">
                       <motion.div
                         className="load"
@@ -890,9 +899,10 @@ const Skills = () => {
                         bounce: 0.3,
                       }}
                       className="mt-3 text-center"
+                      style={{fontFamily:'Karla'}}
                     >
                       {skills.name}
-                    </motion.div>{" "}
+                    </motion.div>
                     <div className="mloader">
                       <motion.div
                         className="load"
@@ -941,9 +951,10 @@ const Skills = () => {
                         bounce: 0.3,
                       }}
                       className="mt-3 text-center"
+                      style={{fontFamily:'Karla'}}
                     >
                       {skills.name}
-                    </motion.div>{" "}
+                    </motion.div>
                     <div className="mloader">
                       <motion.div
                         className="load"
@@ -992,9 +1003,10 @@ const Skills = () => {
                         bounce: 0.3,
                       }}
                       className="mt-3 text-center"
+                      style={{fontFamily:'Karla'}}
                     >
                       {skills.name}
-                    </motion.div>{" "}
+                    </motion.div>
                     <div className="mloader">
                       <motion.div
                         className="load"

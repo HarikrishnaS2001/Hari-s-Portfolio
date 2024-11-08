@@ -1,5 +1,5 @@
 .underscore5 {
-  width: 280px;
+  width: 260px;
   background-color: white;
   height: 10px;
   margin: 0px 10px;
@@ -93,6 +93,7 @@
   flex-direction: column;
   text-align: center;
   font-size: 2rem;
+  font-family: Karla;
   font-weight: 900;
   color: white;
 }
@@ -104,6 +105,7 @@
   width: 100%;
   font-size: 1rem;
   font-weight: 900;
+  font-family: Karla;
   color: white;
 }
 
@@ -114,6 +116,7 @@
   width: 100%;
   font-size: 1rem;
   font-weight: 900;
+  font-family: Karla;
   color: white;
 }
 
@@ -125,6 +128,7 @@
   text-align: center;
   font-size: 2rem;
   font-weight: 900;
+  font-family: Karla;
   color: white;
 }
 
@@ -168,12 +172,14 @@
 .worktitle {
   font-size: xx-large;
   font-weight: 700;
+  font-family: Karla;
   color: white;
 }
 
 .mworktitle {
   font-size: medium;
   font-weight: 700;
+  font-family: Karla;
   color: white;
   text-align: center;
 }
@@ -182,6 +188,7 @@
   width: 90%;
   color: rgb(183, 183, 183);
   font-weight: 500;
+  font-family: Karla;
   font-size: small;
 }
 
@@ -189,6 +196,7 @@
   color: rgb(183, 183, 183);
   font-weight: 500;
   font-size: small;
+  font-family: Karla;
   text-align: center;
 }
 

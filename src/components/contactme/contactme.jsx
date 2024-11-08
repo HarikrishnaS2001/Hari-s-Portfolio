@@ -91,6 +91,7 @@ const Contactme = () => {
                     target="_blank"
                     href={resume}
                     rel="noreferrer"
+                    style={{fontFamily:'Zilla Slab'}}
                   >
                     Download CV <Download />
                   </a>
@@ -111,6 +112,7 @@ const Contactme = () => {
                     target="_blank"
                     href={resume}
                     rel="noreferrer"
+                    style={{fontFamily:'Zilla Slab'}}
                   >
                     View CV &nbsp; <MovingIcon className="socio" />
                   </a>

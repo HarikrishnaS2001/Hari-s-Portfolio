@@ -104,7 +104,7 @@ const Me = () => {
                 }}
                 className="movies"
               >
-                <div className="w-100" style={{height:'90%'}}>
+                <div className="w-100" style={{ height: "90%" }}>
                   <img
                     src={comic2}
                     alt="comic2"
@@ -194,12 +194,14 @@ const Me = () => {
                   }}
                   className="music gochi"
                 >
-                      <p>A.R. Rahman<i class="fa fa-heart"></i>, Ennio Morricone
-                      <i class="fas fa-guitar"></i>, and Hans Zimmer
-                      <i class="fas fa-headphones"></i>. From the timeless classics of
-                      Ilaiyaraaja
-                      <i class="fab fa-spotify"></i>
-                      to the modern hits of Anirudh<i class="fas fa-music"></i></p>
+                  <p>
+                    A.R. Rahman<i class="fa fa-heart"></i>, Ennio Morricone
+                    <i class="fas fa-guitar"></i>, and Hans Zimmer
+                    <i class="fas fa-headphones"></i>. From the timeless
+                    classics of Ilaiyaraaja
+                    <i class="fab fa-spotify"></i>
+                    to the modern hits of Anirudh<i class="fas fa-music"></i>
+                  </p>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}
@@ -474,17 +476,20 @@ const Me = () => {
   ) : (
     <div className="home-page">
       <div style={{ width: "80%" }}>
-        <h1>HI!</h1>
-        <p>
+        <h1 style={{ fontFamily: "Karla" }}>HI!</h1>
+        <p style={{ fontFamily: "Karla" }}>
           This page doesn't contain any technical information. It's all about
           knowing Hari as a person and his hobbies.
         </p>
-        <p>
+        <p style={{ fontFamily: "Karla" }}>
           <Warning />
           Click only if you want to know more about him!
           <Warning />
         </p>
-        <button onClick={handleButtonClick}>
+        <button
+          onClick={handleButtonClick}
+          style={{ fontFamily: "Zilla Slab" }}
+        >
           Click here to know More About Me
         </button>
       </div>

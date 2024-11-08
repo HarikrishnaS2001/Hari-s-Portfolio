@@ -1,6 +1,6 @@
 .typing-container {
     display: inline-block;
-    font-family: monospace; /* Use a monospaced font for a code-like appearance */
+    font-family: monospace;
   }
   
   .typing-text {

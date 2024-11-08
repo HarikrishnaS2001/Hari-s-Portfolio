@@ -3,7 +3,6 @@
   color: white;
 }
 
-
 .design {
   display: flex;
   justify-content: center;
@@ -14,7 +13,6 @@
 .icon {
   color: yellow;
 }
-
 
 .underscore2 {
   background-color: white;
@@ -94,6 +92,7 @@
 .year {
   text-align: center;
   font-weight: 900;
+  font-family: Quattrocento;
   margin-bottom: 1rem;
   margin-left: 2%;
 }
@@ -133,6 +132,7 @@
   margin-top: 10px;
   font-size: small;
   font-weight: 900;
+  font-family: "Karla";
 }
 
 .mcontain {
@@ -142,4 +142,3 @@
   flex-direction: column;
   margin-left: 1%;
 }
- 

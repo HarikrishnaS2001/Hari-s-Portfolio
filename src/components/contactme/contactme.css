@@ -1,5 +1,5 @@
 .underscore6 {
-  width: 280px;
+  width: 260px;
   background-color: white;
   height: 10px;
   margin: 0px 10px;
@@ -27,6 +27,7 @@
   font-weight: 700;
   color: white;
   text-align: center;
+  font-family: Karla;
 }
 
 .view {

@@ -17,14 +17,14 @@ const timelineData = [
     color: "#ff9802",
   },
   {
-    time: "2023 JULY - 2024 MAY",
+    time: "2023 JUN - 2024 MAY",
     title: "Backend At Bounteous",
     description:
       "Worked as backend developer in NOMNOM accelerator. NomNom is a digital accelerator technology by Bounteous designed to enhance custom digital experiences for restaurants.",
     color: "#00c6d9",
   },
   {
-    time: "2024 MAY - 2024 SEP",
+    time: "2024 MAY - Present",
     title: "Frontend At Bounteous",
     description: "Frontend developer at OrderBoard",
     color: "#00a8f6",
