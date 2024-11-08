@@ -278,7 +278,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div style={{fontFamily:'Quattrocento'}}>Languages</div>
+            <div style={{fontFamily:'Karla'}}>Languages</div>
           </motion.div>
           <motion.div
             className={FEclassName}
@@ -287,7 +287,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div style={{fontFamily:'Quattrocento'}}>Front End</div>
+            <div style={{fontFamily:'Karla'}}>Front End</div>
           </motion.div>
           <motion.div
             className={BEclassName}
@@ -296,7 +296,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div style={{fontFamily:'Quattrocento'}}>Back End</div>
+            <div style={{fontFamily:'Karla'}}>Back End</div>
           </motion.div>
           <motion.div
             className={OclassName}
@@ -305,7 +305,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div style={{fontFamily:'Quattrocento'}}>Others</div>
+            <div style={{fontFamily:'Karla'}}>Others</div>
           </motion.div>
         </div>
         {PLclassName === "selectedskill" ? (
@@ -556,7 +556,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div style={{fontFamily:'Quattrocento'}}>Languages</div>
+            <div style={{fontFamily:'Karla'}}>Languages</div>
           </motion.div>
           <motion.div
             className={FEclassName}
@@ -565,7 +565,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div style={{fontFamily:'Quattrocento'}}>Front End</div>
+            <div style={{fontFamily:'Karla'}}>Front End</div>
           </motion.div>
           <motion.div
             className={BEclassName}
@@ -574,7 +574,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div style={{fontFamily:'Quattrocento'}}>Back End</div>
+            <div style={{fontFamily:'Karla'}}>Back End</div>
           </motion.div>
           <motion.div
             className={OclassName}
@@ -583,7 +583,7 @@ const Skills = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div style={{fontFamily:'Quattrocento'}}>Others</div>
+            <div style={{fontFamily:'Karla'}}>Others</div>
           </motion.div>
         </div>
         {PLclassName === "selectedskill" ? (
