@@ -30,28 +30,6 @@
   perspective: 500px;
 }
 
-.blur1 {
-  position: absolute;
-  content: "";
-  width: 20%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
-  z-index: 3;
-}
-
-.blur2 {
-  position: absolute;
-  content: "";
-  width: 20%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
-  z-index: 3;
-}
-
 .dots {
   display: flex;
   flex-direction: column;
