@@ -4,12 +4,12 @@
 
 .knowme {
   font-family: "Permanent Marker", cursive;
-  min-height: 100dvh;
+  min-height: 100vh;
   color: white;
 }
 
 .lapview {
-  height: 100dvh;
+  height: 100vh;
   background: rgb(30, 30, 30);
   background: rgb(30, 30, 30);
   color: white;
@@ -276,7 +276,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
+  height: 100vh;
   text-align: center;
   color: white;
   font-weight: 700;

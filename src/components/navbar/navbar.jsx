@@ -8,7 +8,7 @@ const CustomNavbar = () => {
 
   const menuVariants = {
     open: {
-      height: "100dvh",
+      height: "100vh",
       opacity: 1,
       transition: {
         duration: 0.5,
