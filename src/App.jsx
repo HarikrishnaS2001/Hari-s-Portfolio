@@ -15,9 +15,9 @@ function App() {
 
   return (
     <div className="App">
-      {/* {Title ? (
+      {Title ? (
         <TitleCard />
-      ) : ( */}
+      ) : (
         <div className="classsec">
           <Navbar />
           <section className="home" id="intro">
@@ -39,9 +39,8 @@ function App() {
             <Contactme />
           </section>
         </div>
-      {/* // )} */}
+      )}
     </div>
-      
   );
 }
 
