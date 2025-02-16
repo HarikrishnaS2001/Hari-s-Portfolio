@@ -51,10 +51,9 @@ const Contactme = () => {
       <div className="contact">
         <div className="curve">
           <Title title="Contact Me" underscore="underscore6" />
-
           <div
             className="d-flex flex-column justify-content-around align-items-center w-100 flex-sm-row"
-            style={{ height: "85%" }}
+            style={{ height: "80%" }}
           >
             <div className=" p-3 text-center d-flex flex-column justify-content-center">
               <motion.div
@@ -91,7 +90,7 @@ const Contactme = () => {
                     target="_blank"
                     href={resume}
                     rel="noreferrer"
-                    style={{fontFamily:'Zilla Slab'}}
+                    style={{ fontFamily: "Zilla Slab" }}
                   >
                     Download CV <Download />
                   </a>
@@ -112,7 +111,7 @@ const Contactme = () => {
                     target="_blank"
                     href={resume}
                     rel="noreferrer"
-                    style={{fontFamily:'Zilla Slab'}}
+                    style={{ fontFamily: "Zilla Slab" }}
                   >
                     View CV &nbsp; <MovingIcon className="socio" />
                   </a>
@@ -122,7 +121,7 @@ const Contactme = () => {
             <div className="social">
               <div className="res">Feel free to reach out to me at</div>
               <div className="d-flex flex-row justify-content-around h-100 w-100">
-                {SocialData.map((socio , i) => (
+                {SocialData.map((socio, i) => (
                   <a href={socio.link} target="_blank" rel="noreferrer">
                     <motion.div
                       initial={{ y: 50 }}
@@ -131,7 +130,7 @@ const Contactme = () => {
                         duration: 0.5,
                         type: "spring",
                         bounce: 0.3,
-                        delay: 0.1 *i ,
+                        delay: 0.1 * i,
                       }}
                       className="socialicon"
                     >
@@ -142,6 +141,11 @@ const Contactme = () => {
               </div>
             </div>
           </div>
+
+          <div className="d-flex flex-column align-items-center w-100 copyright">
+            <p>© 2024, Built with React By Hari.</p>
+            <p>All rights reserved.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -149,4 +153,3 @@ const Contactme = () => {
 };
 
 export default Contactme;
- 

@@ -60,8 +60,8 @@ const CustomNavbar = () => {
           initial="closed"
           animate={isOpen ? "open" : "closed"}
         >
-          <a href="#home" className="menuitem" onClick={closeNavbar}>
-            Home
+          <a href="#intro" className="menuitem" onClick={closeNavbar}>
+            Intro
           </a>
           <a href="#education" className="menuitem" onClick={closeNavbar}>
             Education
@@ -86,11 +86,11 @@ const CustomNavbar = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
-          href="#home"
+          href="#intro"
           className="menuitem"
           onClick={closeNavbar}
         >
-          Home
+          Intro
         </motion.a>
         <motion.a
           whileHover={{ scale: 1.05 }}

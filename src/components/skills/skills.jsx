@@ -221,6 +221,12 @@ const Skills = () => {
       proficiency: "80%",
     },
     {
+      name: "cypress.io",
+      imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg",
+      proficiency: "80%",
+    },   
+    {
       name: "Canva",
       imageUrl:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg",

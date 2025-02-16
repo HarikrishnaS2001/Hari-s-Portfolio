@@ -15,12 +15,12 @@ function App() {
 
   return (
     <div className="App">
-      {Title ? (
+      {/* {Title ? (
         <TitleCard />
-      ) : (
+      ) : ( */}
         <div className="classsec">
           <Navbar />
-          <section className="home" id="home">
+          <section className="home" id="intro">
             <Intro />
           </section>
           <section className="education" id="education">
@@ -39,7 +39,7 @@ function App() {
             <Contactme />
           </section>
         </div>
-      )}
+      {/* // )} */}
     </div>
       
   );
