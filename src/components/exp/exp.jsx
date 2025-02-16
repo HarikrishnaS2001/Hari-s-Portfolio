@@ -17,16 +17,16 @@ const timelineData = [
     color: "#ff9802",
   },
   {
-    time: "2023 JUN - 2024 MAY",
-    title: "Backend At Bounteous",
+    time: "2023 JUN - Present",
+    title: "Fullstack dev At Bounteous",
     description:
-      "Worked as backend developer in NOMNOM accelerator. NomNom is a digital accelerator technology by Bounteous designed to enhance custom digital experiences for restaurants.",
+      "Worked as backend developer in NOMNOM accelerator. NomNom is a digital accelerator technology by Bounteous designed to enhance custom digital experiences for restaurants.Frontend developer at OrderBoard using React.js and redux.",
     color: "#00c6d9",
   },
   {
-    time: "2024 MAY - Present",
-    title: "Frontend At Bounteous",
-    description: "Frontend developer at OrderBoard",
+    time: "...",
+    title: "....",
+    description: "Hoping for something great..",
     color: "#00a8f6",
   },
   {
