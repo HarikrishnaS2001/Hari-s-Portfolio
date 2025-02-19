@@ -2,6 +2,7 @@ import React from "react";
 import "./exp.css";
 import Title from "../title/Title";
 import { motion } from "framer-motion";
+import { BackgroundBeams } from "../backgrounds/background-beams";
 
 function getWordsFromString(inputString) {
   const wordsArray = inputString.split(" ");
@@ -52,6 +53,7 @@ const timelineData = [
 const Exp = () => {
   return (
     <div className="experience">
+      <BackgroundBeams />
       <Title title="Experience" underscore="underscore5" />
 
       <div className="content">

@@ -1,7 +1,9 @@
 import "./intro.css";
+import { useState, useEffect } from "react";
 import hari from "../../assets/Hari.png";
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
 import { motion } from "framer-motion";
+import SpaceBackground from "../backgrounds/spacebackground";
 
 const Intro = () => {
   function isIOS() {
@@ -9,6 +11,7 @@ const Intro = () => {
   }
   return (
     <div className="intro">
+      <SpaceBackground />
       <div className="introContent">
         <motion.div
           className="parah1"

@@ -1,10 +1,17 @@
 .intro {
   overflow: hidden;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+  position: relative; 
 }
+
+ .space-background {
+  position: absolute;
+  z-index: 0;
+}  
 
 .introContent {
   height: 100%;
@@ -12,7 +19,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 1rem 0 0 2rem;
-  z-index: 1;
+  z-index: 3;
   background-color: transparent;
 }
 
@@ -57,6 +64,7 @@
   position: relative;
   left: 10%;
   overflow: visible;
+  z-index: 3;
 }
 
 @media (max-width: 767px) {

@@ -10,6 +10,11 @@
   display: none !important;
 }
 
+.skills{
+  position: relative;
+  z-index: 0;
+}
+
 .skillcards {
   height: 60%;
   width: 90%;

@@ -5,10 +5,12 @@ import sastra from "../../assets/sastra.png";
 import srivv from "../../assets/srivv.png";
 import Title from "../title/Title";
 import { motion } from "framer-motion";
+import StarsCanvas from "../backgrounds/Stars";
 
 const Education = () => {
   return (
     <div className="education">
+      <StarsCanvas/>
       <Title title="Education" underscore="underscore" />
 
       <div className="content">
@@ -98,7 +100,7 @@ const Education = () => {
                         delay: 0.2,
                       }}
                       className="h4 text-center mb-3 font-weight-bold"
-                      style={{fontFamily:'Karla'}}
+                      style={{ fontFamily: "Karla" }}
                     >
                       Sri Akilandeswari vidhyalaya
                     </motion.div>
@@ -113,7 +115,7 @@ const Education = () => {
                         duration: 0.3,
                         delay: 0.5,
                       }}
-                      style={{fontFamily:'Karla'}}
+                      style={{ fontFamily: "Karla" }}
                     >
                       A school where I had more fun and friends than focus on
                       academics.
@@ -175,7 +177,7 @@ const Education = () => {
                         delay: 0.2,
                       }}
                       className="h4 text-center mb-3 font-weight-bold"
-                      style={{fontFamily:'Karla'}}
+                      style={{ fontFamily: "Karla" }}
                     >
                       Sri Vageesha Vidhyashram
                     </motion.div>
@@ -190,7 +192,7 @@ const Education = () => {
                         duration: 0.3,
                         delay: 0.5,
                       }}
-                      style={{fontFamily:'Karla'}}
+                      style={{ fontFamily: "Karla" }}
                     >
                       More studies and less fun phase. Still wasn't mehhh
                     </motion.div>
@@ -249,7 +251,7 @@ const Education = () => {
                         delay: 0.2,
                       }}
                       className="h4 text-center mb-3 font-weight-bold"
-                      style={{fontFamily:'Karla'}}
+                      style={{ fontFamily: "Karla" }}
                     >
                       SASTRA DEEMED UNIVERSITY
                     </motion.div>
@@ -264,7 +266,7 @@ const Education = () => {
                         duration: 0.3,
                         delay: 0.5,
                       }}
-                      style={{fontFamily:'Karla'}}
+                      style={{ fontFamily: "Karla" }}
                     >
                       A college experience that felt 75% like what you see in
                       the movies.

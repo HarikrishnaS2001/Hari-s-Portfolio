@@ -4,6 +4,7 @@ import sinon from "../../assets/sinon.png";
 import chai from "../../assets/chai.png";
 import Title from "../title/Title";
 import { motion } from "framer-motion";
+import StarsCanvas from "../backgrounds/Stars";
 
 const Skills = () => {
   const [PLclassName, PLsetClassName] = useState("selectedskill");
@@ -274,6 +275,7 @@ const Skills = () => {
 
   return (
     <div className="skills">
+      <StarsCanvas/>
       <Title title="Skills" underscore="underscore4" />
       <div className={`content ${isSafari() ? " hidden" : ""}`}>
         <div className="skillstitle">

@@ -8,6 +8,8 @@
 
 .experience {
   overflow: hidden;
+  position: relative;
+  z-index: 0;
 }
 
 .expcards {
