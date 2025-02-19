@@ -56,7 +56,7 @@ export const BackgroundBeams = React.memo(({ className }) => {
   ];
   return (
     <div
-      className="position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center"
+      className="meteor position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center"
       style={{masksize: "40px", maskrepeat: "no-repeat"}}
     >
       <svg

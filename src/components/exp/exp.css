@@ -233,6 +233,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .meteor {
+    display: none;
+  }
+}
+
 .mtimeline {
   margin-top: 4rem;
   display: flex;
