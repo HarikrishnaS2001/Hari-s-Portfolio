@@ -5,6 +5,7 @@ const SpaceBackground = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
+    if (!mountRef.current) return;
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -12,9 +13,10 @@ const SpaceBackground = () => {
       0.1,
       1000
     );
+    const mountElement = mountRef.current;
     const renderer = new THREE.WebGLRenderer({ alpha: true }); // Set alpha to true for transparent background
     renderer.setSize(window.innerWidth, window.innerHeight);
-    mountRef.current.appendChild(renderer.domElement);
+    mountElement.appendChild(renderer.domElement);
 
     // Create Stars
     const starGeometry = new THREE.BufferGeometry();
@@ -56,7 +58,9 @@ const SpaceBackground = () => {
     window.addEventListener("resize", handleResize);
 
     return () => {
-      mountRef.current.removeChild(renderer.domElement);
+      if (mountElement) {
+        mountElement.removeChild(renderer.domElement);
+      }
       window.removeEventListener("resize", handleResize);
     };
   }, []);

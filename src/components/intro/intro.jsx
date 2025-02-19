@@ -1,5 +1,4 @@
 import "./intro.css";
-import { useState, useEffect } from "react";
 import hari from "../../assets/Hari.png";
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
 import { motion } from "framer-motion";
